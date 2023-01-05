@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://albedowang.github.io/"/>
+  <link href="www.albedowang.org/"/>
   <updated>2023-01-05T11:31:56.234Z</updated>
-  <id>https://albedowang.github.io/</id>
+  <id>www.albedowang.org/</id>
   
   <author>
     <name>Albedo Wang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo-Theme-Sakura</title>
-    <link href="https://albedowang.github.io/2018/12/12/Hexo-Theme-Sakura/"/>
-    <id>https://albedowang.github.io/2018/12/12/Hexo-Theme-Sakura/</id>
+    <link href="www.albedowang.org/2018/12/12/Hexo-Theme-Sakura/"/>
+    <id>www.albedowang.org/2018/12/12/Hexo-Theme-Sakura/</id>
     <published>2018-12-12T14:16:01.000Z</published>
     <updated>2023-01-05T11:31:56.234Z</updated>
     
@@ -29,12 +29,12 @@
     
     </summary>
     
-      <category term="技术" scheme="https://albedowang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="www.albedowang.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="web" scheme="https://albedowang.github.io/tags/web/"/>
+      <category term="web" scheme="www.albedowang.org/tags/web/"/>
     
-      <category term="悦读" scheme="https://albedowang.github.io/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="www.albedowang.org/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
