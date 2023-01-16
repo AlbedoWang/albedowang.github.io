@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Test | AlbedoのHomepage</title>
+  <title itemprop="name">idekCTF Osint/Osint Crime Confusion 1:W as in Where | AlbedoのHomepage</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/favicon.jpg">
   
@@ -283,11 +283,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9227.webp);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9227.webp">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9224.webp);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9224.webp">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Test</h1>
+      idekCTF Osint/Osint Crime Confusion 1:W as in Where</h1>
       <p class="entry-census">
         <span>
           <a href="www.albedowang.org">
@@ -299,7 +299,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2023-1-6<span class="bull">
+        2023-1-16<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -313,12 +313,25 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p>##测试文本</p>
-<p>本文章只用来测试<em>编写博客以及各项需要的功能</em></p>
-<pre><code>def helloworld():
-    print(&apos;Hello World!&apos;)
-helloworld()
-</code></pre><p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/favicon.jpg" alt="test"></p>
+          <p>#Osint Crime Confusion 1:W as in Where</p>
+<p>（菜菜，只做出了一个社工呜呜呜，强行依靠这个丰富一下主页）</p>
+<p>先看网站上给出的提示：</p>
+<p>Someone has died unexpectedly. The police is on it, but between you and me, I cannot wait for the police. I am a private investigator and I need your help. Unfortunately, we might be tracked so I cannot give you the information directly. Start in a major social network. Certainly not a problem for the best hacker I know right…? Alright here goes a beautiful poem:</p>
+<p><em>Some people in weird ways were connected<br>Some were a triangle, some were less directed<br>For one night they all met<br>At doctor’s Jonathan Abigdail the third they wept<br>Things were said, threats in the air<br>A few days later someone is dead<br>Who is that someone? That is for you to find,<br>Also who is the killer, if you really don’t mind.</em></p>
+<p>于是直接在谷歌上搜了一下doctor’s Jonathan Abigdail the third，发现什么都找不到，然后搜了下dr.Jonathan Abigdail III，幸运的找到了一个有关的Instagram账号<em><a href="https://www.instagram.com/abigdail3djohn/" target="_blank" rel="noopener">https://www.instagram.com/abigdail3djohn/</a></em></p>
+<p>点进去发现这个人只发了一张眼睛的图片，以及图片说明：</p>
+<p><em>Now imagin you could INK IT!<br>That is right, at the famous convention for the eye yours truly is presenting!<br>Hopefully reunited with a lot of old friends to see it!<br>The hashtag is #TheEye12tothe3isthekeytoBEyousee?<br>Get HYPEEEED</em></p>
+<p>接下来点进<em>#TheEye12tothe3isthekeytoBEyousee</em>这个tag，发现了另一个人<em><a href="https://www.instagram.com/hjthepainteng/" target="_blank" rel="noopener">https://www.instagram.com/hjthepainteng/</a></em>的账号，账号描述他来自于一个看起来很可疑的大学：</p>
+<p><em>Study and Teached blue birds at the University of Dutch ThE of Topics in Science (UThE_TS)</em></p>
+<p>结合之前是在社交媒体中找到的线索，所以猜测这里的<em>blue birds</em>指的是twitter，所以我去twitter搜了一下UThE_TS，发现了一个账号<em><a href="https://twitter.com/UThE_TS" target="_blank" rel="noopener">https://twitter.com/UThE_TS</a></em>，然后就没有然后了，根据confusion 2的描述，这个账号应该是在第二题中会有用，第一题大概没啥用。</p>
+<p>回到instagram，看刚才那个人(@hjhepainteng)发的另一张水滴的照片，照片描述：</p>
+<p><em>I do not know what happened, only 3 days after that stupid eye convention you appear dead. Only if there was someone that could find what happened. I only hope you know that you died somewhere after the best performance ever at the great_paintball_portugal competition. I write this still there, arranging for moving your body back home. Farewell. I love you. Also they said they would sell something on ebay for you &lt;3</em></p>
+<p>捕捉到了关键信息应该是great_paintball_portugal和ebay，所以直接去ebay搜了一下great_paintball_portugal，但是什么也没有得到，后来去谷歌搜索了great_paintball_portugal，找到底下搜索结果有一个ebay的链接：<a href="https://www.ebay.com/usr/great_paintball_portugal，点进去发现了：" target="_blank" rel="noopener">https://www.ebay.com/usr/great_paintball_portugal，点进去发现了：</a></p>
+<p><em>About<br>So after the death we actually decided instead of selling just to make a little rip post at https: franparrefrancisco.wixsite.com/great-paintball-pt. We do not want the blog post to be very obvious though because of the publicity.<br>Location: Portugal<br>Member since: May 12, 2022</em></p>
+<p>于是我就打开了<em><a href="https://franparrefrancisco.wixsite.com/great-paintball-pt" target="_blank" rel="noopener">https://franparrefrancisco.wixsite.com/great-paintball-pt</a></em>这个网站，发现什么都没有，点击learn more也没什么反应，搜索框里也得不到什么有用的信息，然后就思考了一下<em>We do not want the blog post to be very obvious though because of the publicity.</em>这句话，就试了试搜索rip和blog以及post，也没啥结果。最后我尝试把网址改成<em><a href="https://franparrefrancisco.wixsite.com/great-paintball-pt/post" target="_blank" rel="noopener">https://franparrefrancisco.wixsite.com/great-paintball-pt/post</a></em>，得到了隐藏的网页，内容是：</p>
+<p>*Death at the Great Paintball Portugal of Heather James<br>Yes, we are sad to confirm that yesterday one athlete by the name Heather James was killed. Authorities are investigating as we speak as are YOU, the reader, I hope.</p>
+<p>We confirm that it was indeed here at idek{TGPP_WCIYD}.*</p>
+<p>最终得到flag。</p>
 
         </div>
         <!-- .entry-content -->
@@ -338,22 +351,39 @@ helloworld()
       <section class="post-squares nextprev">
         
           
-            <div class="post-nepre full previous">
+            <div class="post-nepre half previous">
           
-            <a href="/2023/01/16/idekctf_osint/" rel="prev">
+            <a href="/2023/01/16/idekctf_pyjail/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9224.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9224.webp">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9202.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9202.webp">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                idekCTF Osint/Osint Crime Confusion 1:W as in Where</h3>
+                idekCTF Misc/pyjail</h3>
                 <hr>
               </div>
             </a>
           </div>
         
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2023/01/06/test/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9227.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/img-9227.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Test</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
         
       </section>
       

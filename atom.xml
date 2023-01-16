@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.albedowang.org/"/>
-  <updated>2023-01-06T05:43:00.952Z</updated>
+  <updated>2023-01-16T04:36:22.769Z</updated>
   <id>www.albedowang.org/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>idekCTF Misc/pyjail</title>
+    <link href="www.albedowang.org/2023/01/16/idekctf_pyjail/"/>
+    <id>www.albedowang.org/2023/01/16/idekctf_pyjail/</id>
+    <published>2023-01-16T04:32:33.000Z</published>
+    <updated>2023-01-16T04:36:22.769Z</updated>
+    
+    <summary type="html">
+    
+      pyjail
+    
+    </summary>
+    
+      <category term="技术" scheme="www.albedowang.org/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Misc" scheme="www.albedowang.org/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>idekCTF Osint/Osint Crime Confusion 1:W as in Where</title>
+    <link href="www.albedowang.org/2023/01/16/idekctf_osint/"/>
+    <id>www.albedowang.org/2023/01/16/idekctf_osint/</id>
+    <published>2023-01-16T02:38:09.000Z</published>
+    <updated>2023-01-15T14:19:58.247Z</updated>
+    
+    <summary type="html">
+    
+      wp
+    
+    </summary>
+    
+      <category term="技术" scheme="www.albedowang.org/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Osint" scheme="www.albedowang.org/tags/Osint/"/>
+    
+  </entry>
   
   <entry>
     <title>Test</title>
