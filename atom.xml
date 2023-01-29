@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.albedowang.org/"/>
-  <updated>2023-01-19T04:11:54.902Z</updated>
+  <updated>2023-01-29T03:48:35.798Z</updated>
   <id>www.albedowang.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>资源网站整理</title>
+    <link href="www.albedowang.org/2023/01/29/%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/"/>
+    <id>www.albedowang.org/2023/01/29/资源网站整理/</id>
+    <published>2023-01-29T03:26:13.000Z</published>
+    <updated>2023-01-29T03:48:35.798Z</updated>
+    
+    <summary type="html">
+    
+      网站
+    
+    </summary>
+    
+      <category term="资源" scheme="www.albedowang.org/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+      <category term="网站" scheme="www.albedowang.org/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
   
   <entry>
     <title>idekCTF Misc/pyjail</title>
