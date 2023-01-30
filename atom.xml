@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.albedowang.org/"/>
-  <updated>2023-01-29T03:48:35.798Z</updated>
+  <updated>2023-01-30T07:23:24.034Z</updated>
   <id>www.albedowang.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020网鼎杯 Jocker Wp</title>
+    <link href="www.albedowang.org/2023/01/30/jocker%E7%BD%91%E9%BC%8E%E6%9D%AF/"/>
+    <id>www.albedowang.org/2023/01/30/jocker网鼎杯/</id>
+    <published>2023-01-30T06:14:32.000Z</published>
+    <updated>2023-01-30T07:23:24.034Z</updated>
+    
+    <summary type="html">
+    
+      reverse
+    
+    </summary>
+    
+      <category term="技术" scheme="www.albedowang.org/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="reverse" scheme="www.albedowang.org/tags/reverse/"/>
+    
+  </entry>
   
   <entry>
     <title>资源网站整理</title>
