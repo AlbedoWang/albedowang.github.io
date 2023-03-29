@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">RoarCTF2019 Misc/davinci_cipher | AlbedoのHomepage</title>
+  <title itemprop="name">近期学习内容-2023春 | AlbedoのHomepage</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/favicon.jpg">
   
@@ -283,11 +283,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9556.JPG);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9556.JPG">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9689.JPG);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9689.JPG">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      RoarCTF2019 Misc/davinci_cipher</h1>
+      近期学习内容-2023春</h1>
       <p class="entry-census">
         <span>
           <a href="www.albedowang.org">
@@ -299,7 +299,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2023-2-1<span class="bull">
+        2023-3-29<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -313,44 +313,15 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p>#davinci_cipher </p>
-<p>一个flag.txt和k3y.pcapng文件</p>
-<p>txt打开是：</p>
-<pre><code>U+1F643U+1F4B5U+1F33FU+1F3A4U+1F6AAU+1F30FU+1F40EU+1F94BU+1F6ABU+1F606U+1F383U+1F993U+2709U+1F33FU+1F4C2U+2603U+1F449U+1F6E9U+2705U+1F385U+2328U+1F30FU+1F6E9U+1F6A8U+1F923U+1F4A7U+1F383U+1F34DU+1F601U+2139U+1F4C2U+1F6ABU+1F463U+1F600U+1F463U+1F643U+1F3A4U+2328U+1F601U+1F923U+1F3A4U+1F579U+1F451U+1F6AAU+1F374U+1F579U+1F607U+1F374U+1F40EU+2705U+2709U+1F30FU+23E9U+1F40DU+1F6A8U+2600U+1F607U+1F3F9U+1F441U+1F463U+2709U+1F30AU+1F6A8U+2716
-</code></pre><p>百度后发现好像是emoji编码，然后就不知道能干啥了</p>
-<p>然后分析pcapng文件，发现tcp流里没啥可用的信息，但能看到一堆USB协议的包，并且能看到是来自wacom数位板的信息，用以下指令提取</p>
-<pre><code>tshark -r &apos;k3y.pcapng&apos; -T fields -e usbhid.data|sed &apos;/^$/d&apos; &gt; data.txt 
-</code></pre><p>随便百度了一下怎么分析wacom的usb协议文件，然后写一个脚本</p>
-<pre><code>import numpy
-import matplotlib.pyplot as plt
-
-data=[]
-with open(&apos;data.txt&apos;,&quot;r&quot;) as file:
-for line in file.readlines():
-    if line[16:18]!=&quot;00&quot;:
-        data.append(line)
-X=[]
-Y=[]
-for line in data:
-    x0=int(line[4:6],16)
-    x1=int(line[6:8],16)
-    x=x0+x1*256
-    y0=int(line[10:12],16)
-    y1=int(line[12:14],16)
-    y=y0+y1*256
-    X.append(x)
-    Y.append(-y)
-figure=plt.figure()
-pic=figure.add_subplot(111)
-pic.set_title(&quot;picture&quot;)
-pic.scatter(X,Y,c=&apos;r&apos;,marker=&apos;.&apos;)
-plt.show()
-</code></pre><p>得到了这张图片</p>
-<p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/davinci_cipher.png" alt="wacom"></p>
-<p>文字信息就是<em>MONA_LISA_IS_A_MAN</em>，直接当flag输入发现不对，然后就不知道该干什么了</p>
-<p>后来百度后才发现原来还有emoji密码这种玩意（真踏马够离谱。。），先找个网站(<a href="https://r12a.github.io/app-conversion/" target="_blank" rel="noopener">https://r12a.github.io/app-conversion/</a> )把编码转化成emoji表情<br>再找个解码网站(<a href="https://aghorler.github.io/emoji-aes/#decrypt" target="_blank" rel="noopener">https://aghorler.github.io/emoji-aes/#decrypt</a> )把emoji当密文，<em>MONA_LISA_IS_A_MAN</em>当密钥解出flag</p>
-<pre><code>RoarCTF{wm-m0de3n_dav1chi}
-</code></pre><p>个人总结：分析完wacom的usb协议文件后这题就没什么价值了，后面甚至不如做社工。</p>
+          <p>#近期学习内容</p>
+<p>先把深度学习入门了：<a href="https://space.bilibili.com/1567748478" target="_blank" rel="noopener">https://space.bilibili.com/1567748478</a></p>
+<p>然后去油管看看台大的深度学习课程：<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php" target="_blank" rel="noopener">https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php</a></p>
+<p>完成前两项的同时看一看 《多媒体安全基础导论》</p>
+<p>后话（吐槽）：</p>
+<p>从来没有想过我会入深度学习的坑，所以假期也没想着看相关内容。呜呜呜，本想着去看一看隐写相关的研究，最后交流了一下才知道不管什么方向都和机器学习有些关联，所以只好现在硬着头皮把这东西尽快看完，上百节课的东西，实在是做不出计划来，只能尽快看了。</p>
+<p>其实主要还是因为大二下学期的课程实在是太无聊了（不等于简单）才想多看看别的东西，要么就是文科课要么就是硬件课：这信号与系统和电子线路有啥可学的啊，一点用都没有，计嵌更是重量级，纯纯文科课，比我上学期上的计算机网络还恶心，最后最后还有依托量物答辩要吃，烦人啊：（（（（（</p>
+<p>还好当初没给这学期额外选课，只按照培养方案来学习，要不然真吃不消了。现在四周过去课内已经烂掉了，除了信息论B一直在学以外剩下的都是草草应付作业了事，希望接下来的几个月能好一些吧。。</p>
+<p>私のNPYはどうですか？<br>私のPAPERはどうですか？<br>私のGPAはどうですか？<br>私のFLAGはどうですか？</p>
 
         </div>
         <!-- .entry-content -->
@@ -369,36 +340,19 @@ plt.show()
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2023/03/29/2023春计划/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9689.JPG" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9689.JPG">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                近期学习内容-2023春</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/2023/01/30/jocker网鼎杯/" rel="next">
+            <a href="/2023/02/01/roarCTF2019_davinci_cipher/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.0/IMG_9338.JPG" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.0/IMG_9338.JPG">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9556.JPG" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9556.JPG">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                2020网鼎杯 Jocker Wp</h3>
+                RoarCTF2019 Misc/davinci_cipher</h3>
                 <hr>
               </div>
             </a>

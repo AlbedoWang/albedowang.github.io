@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">RoarCTF2019 Misc/davinci_cipher | AlbedoのHomepage</title>
+  <title itemprop="name">archive_a: 2023/3 | AlbedoのHomepage</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/favicon.jpg">
   
@@ -277,156 +277,169 @@
   </div>
 </header>
 
-      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-<div class="pattern-center-blank"></div>
-
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9556.JPG);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9556.JPG">
-    </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      RoarCTF2019 Misc/davinci_cipher</h1>
-      <p class="entry-census">
-        <span>
-          <a href="www.albedowang.org">
-            <img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/avatar.jpg">
-          </a>
-        </span>
-        <span>
-          <a href="www.albedowang.org">阿贝多</a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2023-2-1<span class="bull">
-        ·</span>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
-    </header>
-  </div>
-
-<div id="content" class="site-content">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
-      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
-        <div class="entry-content">
-          <p>#davinci_cipher </p>
-<p>一个flag.txt和k3y.pcapng文件</p>
-<p>txt打开是：</p>
-<pre><code>U+1F643U+1F4B5U+1F33FU+1F3A4U+1F6AAU+1F30FU+1F40EU+1F94BU+1F6ABU+1F606U+1F383U+1F993U+2709U+1F33FU+1F4C2U+2603U+1F449U+1F6E9U+2705U+1F385U+2328U+1F30FU+1F6E9U+1F6A8U+1F923U+1F4A7U+1F383U+1F34DU+1F601U+2139U+1F4C2U+1F6ABU+1F463U+1F600U+1F463U+1F643U+1F3A4U+2328U+1F601U+1F923U+1F3A4U+1F579U+1F451U+1F6AAU+1F374U+1F579U+1F607U+1F374U+1F40EU+2705U+2709U+1F30FU+23E9U+1F40DU+1F6A8U+2600U+1F607U+1F3F9U+1F441U+1F463U+2709U+1F30AU+1F6A8U+2716
-</code></pre><p>百度后发现好像是emoji编码，然后就不知道能干啥了</p>
-<p>然后分析pcapng文件，发现tcp流里没啥可用的信息，但能看到一堆USB协议的包，并且能看到是来自wacom数位板的信息，用以下指令提取</p>
-<pre><code>tshark -r &apos;k3y.pcapng&apos; -T fields -e usbhid.data|sed &apos;/^$/d&apos; &gt; data.txt 
-</code></pre><p>随便百度了一下怎么分析wacom的usb协议文件，然后写一个脚本</p>
-<pre><code>import numpy
-import matplotlib.pyplot as plt
-
-data=[]
-with open(&apos;data.txt&apos;,&quot;r&quot;) as file:
-for line in file.readlines():
-    if line[16:18]!=&quot;00&quot;:
-        data.append(line)
-X=[]
-Y=[]
-for line in data:
-    x0=int(line[4:6],16)
-    x1=int(line[6:8],16)
-    x=x0+x1*256
-    y0=int(line[10:12],16)
-    y1=int(line[12:14],16)
-    y=y0+y1*256
-    X.append(x)
-    Y.append(-y)
-figure=plt.figure()
-pic=figure.add_subplot(111)
-pic.set_title(&quot;picture&quot;)
-pic.scatter(X,Y,c=&apos;r&apos;,marker=&apos;.&apos;)
-plt.show()
-</code></pre><p>得到了这张图片</p>
-<p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/davinci_cipher.png" alt="wacom"></p>
-<p>文字信息就是<em>MONA_LISA_IS_A_MAN</em>，直接当flag输入发现不对，然后就不知道该干什么了</p>
-<p>后来百度后才发现原来还有emoji密码这种玩意（真踏马够离谱。。），先找个网站(<a href="https://r12a.github.io/app-conversion/" target="_blank" rel="noopener">https://r12a.github.io/app-conversion/</a> )把编码转化成emoji表情<br>再找个解码网站(<a href="https://aghorler.github.io/emoji-aes/#decrypt" target="_blank" rel="noopener">https://aghorler.github.io/emoji-aes/#decrypt</a> )把emoji当密文，<em>MONA_LISA_IS_A_MAN</em>当密钥解出flag</p>
-<pre><code>RoarCTF{wm-m0de3n_dav1chi}
-</code></pre><p>个人总结：分析完wacom的usb协议文件后这题就没什么价值了，后面甚至不如做社工。</p>
-
-        </div>
-        <!-- .entry-content -->
-        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-        <footer class="post-footer">
-          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-          <div class="post-tags">
-          </div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
-      </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2023/03/29/2023春计划/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9689.JPG" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/IMG_9689.JPG">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                近期学习内容-2023春</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/2023/01/30/jocker网鼎杯/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.0/IMG_9338.JPG" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.0/IMG_9338.JPG">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                2020网鼎杯 Jocker Wp</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-      </section>
-      
-
-
-
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="www.albedowang.org" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.0.1/avatar.jpg" itemprop="image" alt="阿贝多" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="www.albedowang.org" itemprop="url" rel="author">阿贝多</a>
-            </h3>
-          </div>
-        </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i>反卷斗士</p>
-      </section>
-    </main><!-- #main -->
-  </div><!-- #primary -->
+      <div class="blank" style="padding-top: 75px;">
 </div>
-
-
+<div id="content" class="site-content">
+  <div id="main">
+    <header class="page-header">
+      <h1 class="cat-title">
+      归档</h1>
+      <span class="cat-des">
+        <p>
+        Archives</p>
+      </span>
+    </header>
+    <div id="main-part">
+      <article class="art">
+        <div class="art-main">
+          <div class="art-content">
+            <div id="archives">
+              <p style="text-align:right;">
+                [<span id="al_expand_collapse" style="cursor: s-resize;">
+                全部展开/收缩</span>
+              ]</p>
+              
+              
+              
+              
+              
+                
+                <h3 class="al_year">2023年</h3>
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      03月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2023/03/29/2023春计划/">
+                          <span style="color:#0bf;">
+                          29日18:34:03</span>
+                          近期学习内容-2023春
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      02月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2023/02/01/roarCTF2019_davinci_cipher/">
+                          <span style="color:#0bf;">
+                          01日20:24:32</span>
+                          RoarCTF2019 Misc/davinci_cipher
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      01月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style="">
+              
+                      <li>
+                        <a href="/2023/01/30/jocker网鼎杯/">
+                          <span style="color:#0bf;">
+                          30日14:14:32</span>
+                          2020网鼎杯 Jocker Wp
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2023/01/29/资源网站整理/">
+                          <span style="color:#0bf;">
+                          29日11:26:13</span>
+                          资源网站整理
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2023/01/16/idekctf_pyjail/">
+                          <span style="color:#0bf;">
+                          16日12:32:33</span>
+                          idekCTF Misc/pyjail
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2023/01/16/idekctf_osint/">
+                          <span style="color:#0bf;">
+                          16日10:38:09</span>
+                          idekCTF Osint/Osint Crime Confusion 1:W as in Where
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2023/01/06/test/">
+                          <span style="color:#0bf;">
+                          06日03:15:21</span>
+                          Test
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
 
     </div>    
     <div class="ins-search">
