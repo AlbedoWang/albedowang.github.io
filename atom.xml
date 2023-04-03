@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.albedowang.org/"/>
-  <updated>2023-03-29T10:50:40.926Z</updated>
+  <updated>2023-04-03T07:38:31.651Z</updated>
   <id>www.albedowang.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2023RITCTF Bitmap Wp</title>
+    <link href="www.albedowang.org/2023/04/03/RITCTF_bitmap/"/>
+    <id>www.albedowang.org/2023/04/03/RITCTF_bitmap/</id>
+    <published>2023-04-03T07:10:32.000Z</published>
+    <updated>2023-04-03T07:38:31.651Z</updated>
+    
+    <summary type="html">
+    
+      Steganography
+    
+    </summary>
+    
+      <category term="技术" scheme="www.albedowang.org/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Steganography" scheme="www.albedowang.org/tags/Steganography/"/>
+    
+  </entry>
   
   <entry>
     <title>近期学习内容-2023春</title>
