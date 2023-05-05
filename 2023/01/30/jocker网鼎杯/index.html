@@ -313,8 +313,7 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p>#学习向wp</p>
-<p>查无壳后放入IDA，无法用F5进行反编译，并有如下报错</p>
+          <h1 id="学习向wp"><a href="#学习向wp" class="headerlink" title="学习向wp"></a>学习向wp</h1><p>查无壳后放入IDA，无法用F5进行反编译，并有如下报错</p>
 <p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.0/jocker1.JPG" alt="sp-analysis-failed"></p>
 <p>经过学习后，了解到是由于堆栈不平衡导致的(<a href="https://blog.csdn.net/qq_39539312/article/details/82834004" target="_blank" rel="noopener">https://blog.csdn.net/qq_39539312/article/details/82834004</a>)<br>在Options-&gt;General中打开Stack pointer后找到报错的0x401838后发现call near ptr前后的指针位置不同，且retn不为00。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.0/jocker2.PNG" alt="内存"></p>
