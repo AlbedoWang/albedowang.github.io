@@ -147,7 +147,7 @@ function bot_ui_ini() {
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
-                    content: "我要去玩了，再见 ^_^"
+                    content: "我要去玩了，再见，记得要快乐～ ^_^"
                 })
             })
         } 
