@@ -1,0 +1,537 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>2023RITCTF bitmap wp - Kaijian Wang / Homepage</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Kaijian Wang / Homepage">
+<meta property="og:title" content="2023RITCTF bitmap wp">
+
+
+  <link rel="canonical" href="http://localhost:4000/posts/2023/04/2023RITCTF/">
+  <meta property="og:url" content="http://localhost:4000/posts/2023/04/2023RITCTF/">
+
+
+
+  <meta property="og:description" content="Steganography bitmap wp">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2023-04-03T00:00:00-07:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Kaijian Wang",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Kaijian Wang / Homepage Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    
+
+<!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://localhost:4000/images/apple-touch-icon-57x57.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="60x60" href="http://localhost:4000/images/apple-touch-icon-60x60.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:4000/images/apple-touch-icon-76x76.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:4000/images/apple-touch-icon-120x120.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:4000/images/apple-touch-icon-152x152.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/images/apple-touch-icon-180x180.png?v=M44lzPylqQ">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-32x32.png?v=M44lzPylqQ" sizes="32x32">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/android-chrome-192x192.png?v=M44lzPylqQ" sizes="192x192">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-96x96.png?v=M44lzPylqQ" sizes="96x96">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-16x16.png?v=M44lzPylqQ" sizes="16x16">
+<link rel="manifest" href="http://localhost:4000/images/manifest.json?v=M44lzPylqQ">
+<link rel="mask-icon" href="http://localhost:4000/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
+<link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="http://localhost:4000/images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="http://localhost:4000/images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Kaijian Wang / Homepage</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Blog Posts</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/teaching/">Teaching</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/portfolio/">Portfolio</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/avatar-square.jpg" class="author__avatar" alt="Kaijian Wang">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Kaijian Wang</h3>
+    <p class="author__bio">Undergraduate of University of Science and Technology of China (USTC)</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Hefei, Anhui, China</li>
+      
+      
+      
+      
+      
+       
+      
+        <li><a href="https://twitter.com/Albedowang"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/albedowang"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="2023RITCTF bitmap wp">
+    <meta itemprop="description" content="Steganography bitmap wp">
+    <meta itemprop="datePublished" content="April 03, 2023">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">2023RITCTF bitmap wp
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2023-04-03T00:00:00-07:00">April 03, 2023</time></p>
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <h2 id="steganography-bitmap-wp">Steganography bitmap wp</h2>
+
+<p>Thanks to the simplicity of RITCTF, I achieved the achievement of AK Steg for the first time, very happy : )))</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap.bmp" alt="bitmap" /></p>
+
+<p>A QR code picture. After scanning, you will get the URL: https://tinyurl.com/3acwfenx. Click on it to jump to a YouTube video. The BGM is Never Gonna Give You Up. It is trash.</p>
+
+<p>Next, open it with a hexadecimal editor. After browsing for a while, I saw that there is an XOR BY ‘FF’. I don’t understand it very well. It is obviously useless to XOR the black and white QR code image with FF, so I will leave it for now. We will use it later.</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_hex.png" alt="bitmap_hex" /></p>
+
+<p>According to the prompt in the title description “Some of these squares are not like the others.” I looked at the QR code carefully and found that the two strings of squares in the red frame seemed to be added later, but because I understood that the two strings of squares were used It means Timing, which is useless, so the focus is here.</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_wrong.bmp" alt="bitmap_wrong" /></p>
+
+<p>If you look carefully, you can see a series of strange things in the lower right corner of the picture.</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_color.bmp" alt="bitmap_color" /></p>
+
+<p>After zooming in, we can guess that this string is the data that contains the flag. According to the previously discovered XOR BY ‘FF’, we can probably get the flag by XORing this string of data with FF.</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_colorstring.png" alt="bitmap_colorstring" /></p>
+
+<p>After taking the screenshot, use a hexadecimal editor to view it.</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_flagstring.png" alt="bitmap_flagstring" /></p>
+
+<p>To sort it out it is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ff ff ff ff ff ff ff ff ff ff ff ff ff bd b3 ff b0 a8 b9 ff b6 ac b7 ff a0 b4 ba ff a6 c2 d8 ff a0 ad b6 ff ab ac ba ff bc a0 d8 ff df df df ff df b6 a9 ff c2 d8 bd ff b3 b0 a8 ff b9 b6 ac ff b7 d8 df ff df df df ff b2 b0 bb ff ba c2 bc ff bd bc df ff df df df ff b6 b1 c2 ff b7 ba a7 ff df df df ff df b0 aa ff ab c2 b7 ff ba a7 df ff df df df ff bc b6 af ff b7 ba ad ff d7 aa ac ff ba df b6 ff b1 df b7 ff ba a7 d6 ff c2 d8 9b ff bb a4 f5 ff d4 4e 40 ff 5a 65 27 ff ca 09 d8 ff 9e b2 63 ff 2e 4c 1d ff ac 7b 04 ff f3 2f 52 ff b6 68 d3 ff e5 5c ed ff ff d8 ff ff ff ff ff ff ff ff ff ff
+</code></pre></div></div>
+
+<p>Then use FF XOR and convert to ASCII code to get: BLOWFISH_KEY=’_RITSEC_’ IV=’BLOWFISH’ MODE=CBC IN=HEX OUT=HEX CIPHER(USE IN HEX)=’64 44 5b 0a 2b b1 bf a5 9a d8 35 f6 27 61 4d 9c d1 b3 e2 53 84 fb 0c d0 ad 49 97 2c 1a a3 12 00’</p>
+
+<p>After searching, I learned that BLOWFISH is an encryption method. Use Cyberchef’s blowfish decrypt directly, enter the KEY, IV, MODE, IN, OUT given by him, and then convert the resulting hexadecimal string into ASCII code to get the flag.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    get flag: RS{CONSIDER_THESE_BITS_MAPPED}
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#steganography" class="page__taxonomy-item" rel="tag">Steganography</a>
+    
+    </span>
+  </p>
+
+
+
+
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/posts/2023/04/2023RITCTF/" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/posts/2023/04/2023RITCTF/" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/posts/2023/04/2023RITCTF/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/posts/2023/02/RoarCTF2019/" class="pagination--pager" title="RoarCTF2019 Misc/davinci_cipher
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2023/02/RoarCTF2019/" rel="permalink">RoarCTF2019 Misc/davinci_cipher
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2023-02-01T00:00:00-08:00">February 01, 2023</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><h2 id="davinci_cipher">davinci_cipher</h2>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2023/01/2023idekCTF/" rel="permalink">2023idekCTF Osint/Osint Crime Confusion 1:W as in Where
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  4 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2023-01-16T00:00:00-08:00">January 16, 2023</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><h2 id="osint-crime-confusion-1w-as-in-where">Osint Crime Confusion 1:W as in Where</h2>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/albedowang"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Kaijian Wang. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

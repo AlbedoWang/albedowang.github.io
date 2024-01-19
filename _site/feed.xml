@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-19T00:47:36-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kaijian Wang / Homepage</title><subtitle>personal description</subtitle><author><name>Kaijian Wang</name></author><entry><title type="html">2023RITCTF bitmap wp</title><link href="http://localhost:4000/posts/2023/04/2023RITCTF/" rel="alternate" type="text/html" title="2023RITCTF bitmap wp" /><published>2023-04-03T00:00:00-07:00</published><updated>2023-04-03T00:00:00-07:00</updated><id>http://localhost:4000/posts/2023/04/RITCTF_bitmap</id><content type="html" xml:base="http://localhost:4000/posts/2023/04/2023RITCTF/">&lt;h2 id=&quot;steganography-bitmap-wp&quot;&gt;Steganography bitmap wp&lt;/h2&gt;
+
+&lt;p&gt;Thanks to the simplicity of RITCTF, I achieved the achievement of AK Steg for the first time, very happy : )))&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap.bmp&quot; alt=&quot;bitmap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A QR code picture. After scanning, you will get the URL: https://tinyurl.com/3acwfenx. Click on it to jump to a YouTube video. The BGM is Never Gonna Give You Up. It is trash.&lt;/p&gt;
+
+&lt;p&gt;Next, open it with a hexadecimal editor. After browsing for a while, I saw that there is an XOR BY ‘FF’. I don’t understand it very well. It is obviously useless to XOR the black and white QR code image with FF, so I will leave it for now. We will use it later.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_hex.png&quot; alt=&quot;bitmap_hex&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;According to the prompt in the title description “Some of these squares are not like the others.” I looked at the QR code carefully and found that the two strings of squares in the red frame seemed to be added later, but because I understood that the two strings of squares were used It means Timing, which is useless, so the focus is here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_wrong.bmp&quot; alt=&quot;bitmap_wrong&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you look carefully, you can see a series of strange things in the lower right corner of the picture.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_color.bmp&quot; alt=&quot;bitmap_color&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After zooming in, we can guess that this string is the data that contains the flag. According to the previously discovered XOR BY ‘FF’, we can probably get the flag by XORing this string of data with FF.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_colorstring.png&quot; alt=&quot;bitmap_colorstring&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After taking the screenshot, use a hexadecimal editor to view it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/albedowang/cdn@1.4.0/wp/bitmap_flagstring.png&quot; alt=&quot;bitmap_flagstring&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To sort it out it is:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ff ff ff ff ff ff ff ff ff ff ff ff ff bd b3 ff b0 a8 b9 ff b6 ac b7 ff a0 b4 ba ff a6 c2 d8 ff a0 ad b6 ff ab ac ba ff bc a0 d8 ff df df df ff df b6 a9 ff c2 d8 bd ff b3 b0 a8 ff b9 b6 ac ff b7 d8 df ff df df df ff b2 b0 bb ff ba c2 bc ff bd bc df ff df df df ff b6 b1 c2 ff b7 ba a7 ff df df df ff df b0 aa ff ab c2 b7 ff ba a7 df ff df df df ff bc b6 af ff b7 ba ad ff d7 aa ac ff ba df b6 ff b1 df b7 ff ba a7 d6 ff c2 d8 9b ff bb a4 f5 ff d4 4e 40 ff 5a 65 27 ff ca 09 d8 ff 9e b2 63 ff 2e 4c 1d ff ac 7b 04 ff f3 2f 52 ff b6 68 d3 ff e5 5c ed ff ff d8 ff ff ff ff ff ff ff ff ff ff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then use FF XOR and convert to ASCII code to get: BLOWFISH_KEY=’_RITSEC_’ IV=’BLOWFISH’ MODE=CBC IN=HEX OUT=HEX CIPHER(USE IN HEX)=’64 44 5b 0a 2b b1 bf a5 9a d8 35 f6 27 61 4d 9c d1 b3 e2 53 84 fb 0c d0 ad 49 97 2c 1a a3 12 00’&lt;/p&gt;
+
+&lt;p&gt;After searching, I learned that BLOWFISH is an encryption method. Use Cyberchef’s blowfish decrypt directly, enter the KEY, IV, MODE, IN, OUT given by him, and then convert the resulting hexadecimal string into ASCII code to get the flag.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    get flag: RS{CONSIDER_THESE_BITS_MAPPED}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Kaijian Wang</name></author><category term="Steganography" /><summary type="html">Steganography bitmap wp</summary></entry><entry><title type="html">RoarCTF2019 Misc/davinci_cipher</title><link href="http://localhost:4000/posts/2023/02/RoarCTF2019/" rel="alternate" type="text/html" title="RoarCTF2019 Misc/davinci_cipher" /><published>2023-02-01T00:00:00-08:00</published><updated>2023-02-01T00:00:00-08:00</updated><id>http://localhost:4000/posts/2023/02/RoarCTF2019</id><content type="html" xml:base="http://localhost:4000/posts/2023/02/RoarCTF2019/">&lt;h2 id=&quot;davinci_cipher&quot;&gt;davinci_cipher&lt;/h2&gt;
+
+&lt;p&gt;A flag.txt and a k3y.pcapng file:&lt;/p&gt;
+
+&lt;p&gt;flag.txt:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;U+1F643U+1F4B5U+1F33FU+1F3A4U+1F6AAU+1F30FU+1F40EU+1F94BU+1F6ABU+1F606U+1F383U+1F993U+2709U+1F33FU+1F4C2U+2603U+1F449U+1F6E9U+2705U+1F385U+2328U+1F30FU+1F6E9U+1F6A8U+1F923U+1F4A7U+1F383U+1F34DU+1F601U+2139U+1F4C2U+1F6ABU+1F463U+1F600U+1F463U+1F643U+1F3A4U+2328U+1F601U+1F923U+1F3A4U+1F579U+1F451U+1F6AAU+1F374U+1F579U+1F607U+1F374U+1F40EU+2705U+2709U+1F30FU+23E9U+1F40DU+1F6A8U+2600U+1F607U+1F3F9U+1F441U+1F463U+2709U+1F30AU+1F6A8U+2716
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After searching on Google, I found that it seemed to be emoji encoding, and then I didn’t know what to do.&lt;/p&gt;
+
+&lt;p&gt;Then analyze the pcapng file and find that there is no usable information in the tcp stream, but you can see a bunch of USB protocol packets, and you can see that the information is from the wacom tablet. Use the following command to extract it&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tshark -r &apos;k3y.pcapng&apos; -T fields -e usbhid.data|sed &apos;/^$/d&apos; &amp;gt; data.txt 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I checked how to analyze wacom’s usb protocol file and then write a script:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy
+import matplotlib.pyplot as plt
+
+data=[]
+with open(&apos;data.txt&apos;,&quot;r&quot;) as file:
+for line in file.readlines():
+    if line[16:18]!=&quot;00&quot;:
+        data.append(line)
+X=[]
+Y=[]
+for line in data:
+    x0=int(line[4:6],16)
+    x1=int(line[6:8],16)
+    x=x0+x1*256
+    y0=int(line[10:12],16)
+    y1=int(line[12:14],16)
+    y=y0+y1*256
+    X.append(x)
+    Y.append(-y)
+figure=plt.figure()
+pic=figure.add_subplot(111)
+pic.set_title(&quot;picture&quot;)
+pic.scatter(X,Y,c=&apos;r&apos;,marker=&apos;.&apos;)
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then got this picture:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/albedowang/cdn@1.2.1/davinci_cipher.png&quot; alt=&quot;wacom&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The text message is &lt;em&gt;MONA_LISA_IS_A_MAN&lt;/em&gt;. If you input it directly as flag and find something wrong, then you don’t know what to do.&lt;/p&gt;
+
+&lt;p&gt;Later, I discovered that there is such a thing as emoji passwords (it’s so outrageous…). First, find a website (https://r12a.github.io/app-conversion/) to convert the encoding into emoji expressions.
+Find a decoding website (https://aghorler.github.io/emoji-aes/#decrypt) and use emoji as ciphertext and &lt;em&gt;MONA_LISA_IS_A_MAN&lt;/em&gt; as the key to decrypt the flag.
+    RoarCTF{wm-m0de3n_dav1chi}&lt;/p&gt;
+
+&lt;p&gt;Personal summary: After analyzing Wacom’s USB protocol file, this question is of little value, and it may even be better to do social work later.&lt;/p&gt;</content><author><name>Kaijian Wang</name></author><category term="Misc" /><category term="USB Traffic Analysis" /><category term="Emoji-AES" /><summary type="html">davinci_cipher</summary></entry><entry><title type="html">2023idekCTF Osint/Osint Crime Confusion 1:W as in Where</title><link href="http://localhost:4000/posts/2023/01/2023idekCTF/" rel="alternate" type="text/html" title="2023idekCTF Osint/Osint Crime Confusion 1:W as in Where" /><published>2023-01-16T00:00:00-08:00</published><updated>2023-01-16T00:00:00-08:00</updated><id>http://localhost:4000/posts/2023/01/idekctf_osint</id><content type="html" xml:base="http://localhost:4000/posts/2023/01/2023idekCTF/">&lt;h2 id=&quot;osint-crime-confusion-1w-as-in-where&quot;&gt;Osint Crime Confusion 1:W as in Where&lt;/h2&gt;
+
+&lt;p&gt;First look at the tips given on the website:&lt;/p&gt;
+
+&lt;p&gt;Someone has died unexpectedly. The police is on it, but between you and me, I cannot wait for the police. I am a private investigator and I need your help. Unfortunately, we might be tracked so I cannot give you the information directly. Start in a major social network. Certainly not a problem for the best hacker I know right…? Alright here goes a beautiful poem:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Some people in weird ways were connected
+Some were a triangle, some were less directed
+For one night they all met
+At doctor’s Jonathan Abigdail the third they wept 
+Things were said, threats in the air
+A few days later someone is dead
+Who is that someone? That is for you to find,
+Also who is the killer, if you really don’t mind.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So I directly searched doctor’s Jonathan Abigdail the third on Google and found that I couldn’t find anything. Then I searched for dr.Jonathan Abigdail III and luckily found a relevant Instagram account.&lt;em&gt;https://www.instagram.com/abigdail3djohn/&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I clicked in and found that this person only posted a picture of eyes and a description of the picture:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now imagin you could INK IT!
+That is right, at the famous convention for the eye yours truly is presenting!
+Hopefully reunited with a lot of old friends to see it!
+The hashtag is #TheEye12tothe3isthekeytoBEyousee?
+Get HYPEEEED&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, I clicked on the tag &lt;em&gt;#TheEye12tothe3isthekeytoBEyousee&lt;/em&gt; and found the account of another person &lt;em&gt;https://www.instagram.com/hjthepainteng/&lt;/em&gt;. The account described him as coming from a university that looked suspicious:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Study and Teached blue birds at the University of Dutch ThE of Topics in Science (UThE_TS)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Combining the clues I found in social media before, I guessed that &lt;em&gt;blue birds&lt;/em&gt; here refers to twitter, so I went to twitter to search for UThE_TS and found an account &lt;em&gt;https://twitter.com/UThE_TS&lt;/em&gt;, and then There is no more. According to the description of confusion 2, this account should be useful in the second question, and probably not useful in the first question.&lt;/p&gt;
+
+&lt;p&gt;Go back to Instagram and look at another photo of water droplets posted by the person just now (@hjhepainteng). Photo description:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I do not know what happened, only 3 days after that stupid eye convention you appear dead. Only if there was someone that could find what happened. I only hope you know that you died somewhere after the best performance ever at the great_paintball_portugal competition. I write this still there, arranging for moving your body back home. Farewell. I love you. Also they said they would sell something on ebay for you &amp;lt;3&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The key information captured should be great_paintball_portugal and ebay, so I went directly to eBay to search for great_paintball_portugal, but found nothing. Then I went to Google to search for great_paintball_portugal, and found an eBay link in the search results at the bottom: https://www.ebay. com/usr/great_paintball_portugal, click on it and find:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;About
+So after the death we actually decided instead of selling just to make a little rip post at https: franparrefrancisco.wixsite.com/great-paintball-pt. We do not want the blog post to be very obvious though because of the publicity.
+Location: Portugal
+Member since: May 12, 2022&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So I opened the website &lt;em&gt;https://franparrefrancisco.wixsite.com/great-paintball-pt&lt;/em&gt; and found that there was nothing there. There was no response when I clicked learn more, and I couldn’t find any useful information in the search box. Then I thought about the sentence &lt;em&gt;We do not want the blog post to be very obvious though because of the publicity.&lt;/em&gt;, and then tried searching for rip, blog and post, but there was no result. Finally, I tried to change the URL to &lt;em&gt;https://franparrefrancisco.wixsite.com/great-paintball-pt/post&lt;/em&gt;, and got a hidden web page with the following content:&lt;/p&gt;
+
+&lt;p&gt;*Death at the Great Paintball Portugal of Heather James
+Yes, we are sad to confirm that yesterday one athlete by the name Heather James was killed. Authorities are investigating as we speak as are YOU, the reader, I hope.&lt;/p&gt;
+
+&lt;p&gt;We confirm that it was indeed here at idek{TGPP_WCIYD}.*&lt;/p&gt;</content><author><name>Kaijian Wang</name></author><category term="Osint" /><summary type="html">Osint Crime Confusion 1:W as in Where</summary></entry></feed>
