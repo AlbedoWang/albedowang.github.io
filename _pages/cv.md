@@ -14,7 +14,7 @@ Education
 * B.E. in Information Security, University of Science and Technology of China, 2021-now
 <!-- * M.S. in Jekyll, GitHub University, 2014 -->
 <!-- * Ph.D in Version Control Theory, GitHub University, 2018 (expected) -->
-* Overall GPA: 3.46 /4.3 TOEFL: 94 /120
+* Major GPA: 3.58 /4.3 Overall GPA: 3.46 /4.3 TOEFL: 94 /120
 * Core Courses:
   Data Structure and Algorithm: 92 /100, Introduction to Cryptography: 88 /100, Abstract Algebra and Number Theory: 86 /100, 
   Design and Practice of Information Security I: A+, Computer Network: 92 /100, Algorithm Analysis and Design: 90 /100 
