@@ -19,8 +19,15 @@ Education
   Data Structure and Algorithm: 92 /100, Introduction to Cryptography: 88 /100, Abstract Algebra and Number Theory: 86 /100, 
   Design and Practice of Information Security I: A+, Computer Network: 92 /100, Algorithm Analysis and Design: 90 /100 
 
+# Honors and Awards
+
+- **DAS Scholarship**, USTC \& DAS-Security Inc., Nov. 2023
+- **Outstanding Student Scholarship**, *Bronze Prize*, USTC, Oct. 2023
+- **Zhang Zongzhi Science and Technology Scholarship**, USTC, Oct. 2022
+
 Research experience
 ======
+
 * **Robust DNN Watermark against Spatial Exploition**
   * Aug. 2023 - now: Intern in *Zhang Weiming's Group, USTC*
   * Brief Introduction: Provided a watermark that countered cropping attacks and spatial exploition.
