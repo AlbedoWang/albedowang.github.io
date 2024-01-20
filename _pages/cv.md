@@ -25,10 +25,11 @@ Research experience
   * Aug. 2023 - now: Intern in *Zhang Weiming's Group, USTC*
   * Brief Introduction: Provided a watermark that countered cropping attacks and spatial exploition.
   * Duties included: 
-    * Implemented the model codes, focusing on integrating **SURF feature matching** for precise restoration ofthe watermark’s original position in images. 
-    * Trained the network and performed ablation experiments.
+    * Proposed a watermark recovery module based on image hiding, designed to restore information-embedded images subjected to cropping and spatial manipulation.
+    * This module can seamlessly integrate with existing information hiding-extraction networks, thereby enhancing their robustness.
+    * Completed training on the reproduction of related research and developed the code for the module framework as proposed by coworker.
   * Supervisor: Research Associate [Kejiang Chen](http://home.ustc.edu.cn/~chenkj/), Professor [Weiming Zhang](http://staff.ustc.edu.cn/~zhangwm/)
-
+  
 * **Research on Diffusion Model Watermark**
   * Oct. 2023 - now: Independent Research in *Zhang Weiming's Group, USTC*
   * Duties included: 
@@ -69,19 +70,19 @@ Skills
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
-  
+
 <!-- Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul> -->
-  
+
 Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
 Service and leadership
 ======
 * Group leader of the class study group
