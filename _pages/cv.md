@@ -14,7 +14,7 @@ Education
 * B.E. in Information Security, University of Science and Technology of China, 2021-now
 <!-- * M.S. in Jekyll, GitHub University, 2014 -->
 <!-- * Ph.D in Version Control Theory, GitHub University, 2018 (expected) -->
-* Major GPA: 3.58 /4.3 Overall GPA: 3.46 /4.3 TOEFL: 94 /120
+* Major GPA: 3.59 /4.3 Overall GPA: 3.47 /4.3 TOEFL: 94 /120
 * Core Courses:
   Data Structure and Algorithm: 92 /100, Introduction to Cryptography: 88 /100, Abstract Algebra and Number Theory: 86 /100, 
   Design and Practice of Information Security I: A+, Computer Network: 92 /100, Algorithm Analysis and Design: 90 /100 
@@ -61,7 +61,7 @@ Competition Experience
 ======
 I'm a team member of *USTC-NEBULA*, my major direcitons are *Steganograghy & Forensics* and *AI-Security*
 * Prizes:
-  * Top 3rd(1%), TPCTF, Tsinghua University & Peking University, Nov. 2023
+  * Top 3rd (1%), TPCTF, Tsinghua University & Peking University, Nov. 2023
   * 3rd Prize (top 5%), Hackergame, USTC, Nov. 2023
   * 3rd Prize in competition area (top 20%), National College Student Information Security Contest, China, June. 2023
   * 3rd Prize (top 20%), D^3CTF, Alibaba Inc., May. 2023
