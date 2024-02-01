@@ -16,8 +16,7 @@ Education
 <!-- * Ph.D in Version Control Theory, GitHub University, 2018 (expected) -->
 * Major GPA: 3.59 /4.3 Overall GPA: 3.47 /4.3 TOEFL: 94 /120
 * Core Courses:
-  Data Structure and Algorithm: 92 /100, Introduction to Cryptography: 88 /100, Abstract Algebra and Number Theory: 86 /100, 
-  Design and Practice of Information Security I: A+, Computer Network: 92 /100, Algorithm Analysis and Design: 90 /100 
+  Data Structure and Algorithm: 92 /100, Compiler Theory: 87 /100, Operating System: 86 /100 (lab: 60 /60), Algorithm Analysis and Design: 90 /100, Principles of Computers and Embedded Systems: 85 /100, Design and Practice of Information Security I: A+, Computer Network: 92 /100
 
 # Honors and Awards
 
@@ -47,11 +46,12 @@ Research experience
 
 Projects
 ======
-* **Library Management System**  
-  * Oct. 2023 - Nov. 2023: Course Project of *Fundamentals of Database Systems*
-  * Used **Python Sqlite3** to manage library database, **Flask** to accomplish the front-end and back-end interaction.
-  * The system handled the borrowing, purchase, sale, and deletion of library books, and made statistics and records.
-
+* **Tiny-C compiler**  
+  * Oct. 2023 - Nov. 2023: Course Project of *Compiler Theory*
+  * Developed a simplified C compiler in C, implementing lexical analysis, syntax analysis, and Intermediate Representation (IR) generation for the Tiny-C language.
+  * Supported key C language features in Tiny-C, including assignment, arithmetic operations, while loops, and if-else statements.
+  * Utilized GDB for debugging C programs compiled with GCC on x86-64 Linux systems to understand register calls and system-level operations.
+  
 * **Reinforcement Learning Algorithm** 
   * Nov. 2023 - Dec. 2023: Course Project of *Algorithm Analysis and Design*
   * Implemented a **Deep Q-Network** to solve the 0-1 Knapsack problem, where a neural network learned to maximize the value of items selected within a weight limit.
@@ -59,12 +59,11 @@ Projects
 
 Competition Experience
 ======
-I'm a team member of *USTC-NEBULA*, my major direcitons are *Steganograghy & Forensics* and *AI-Security*
-* Prizes:
-  * Top 3rd (1%), TPCTF, Tsinghua University & Peking University, Nov. 2023
-  * 3rd Prize (top 5%), Hackergame, USTC, Nov. 2023
-  * 3rd Prize in competition area (top 20%), National College Student Information Security Contest, China, June. 2023
-  * 3rd Prize (top 20%), D^3CTF, Alibaba Inc., May. 2023
+Team member of *USTC-NEBULA*  major direciton:  *Steganograghy and Forensics* ,  *AI-Security*
+* Top 3rd (1%), TPCTF, Tsinghua University & Peking University, Nov. 2023
+* 3rd Prize (top 10%), Hackergame, USTC, Nov. 2023
+* 3rd Prize in competition area (top 20%), National College Student Information Security Contest, China, June. 2023
+* 3rd Prize (top 20%), D^3CTF, Alibaba Inc., May. 2023
 
 Skills
 ======
