@@ -14,7 +14,7 @@ University of Science and Technology of China(USTC)
 Personal Information
 ======
 I'm an undergraduate student in the School of Cyber Security, University of Science ad Technology of China(USTC). My current research interets span LLM Server System , Distributed System and Machine Learning Compiler.  
-Meanwhile, I'm a remote intern in [PICASSO Lab](https://picassolab.squarespace.com) at UC San Diego and will do in-person research during summer vacation.
+Meanwhile, I'm a remote intern at UC San Diego and will do in-person research during summer vacation.
 
 Contacts
 ======
