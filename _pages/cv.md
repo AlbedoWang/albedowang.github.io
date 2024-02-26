@@ -29,12 +29,13 @@ Research experience
 ======
 
 * **LLM Server System Optimization**
-  * Feb. 2024 - Now: Intern in *PICASSO Lab, UCSD*
+  * Feb. 2024 - Now: Intern in *xxx Lab, UCSD*
   * Brief Introduction: Proposed a novel LLM Server System xxxx
   * Duties included:
     * TODO
     * TODO
     * TODO
+   * Supervisor: Associate Professor xxxx
 
 * **Robust DNN Watermark against Spatial Exploition**
   * Aug. 2023 - Feb. 2024: Intern in *Zhang Weiming's Group, USTC*
