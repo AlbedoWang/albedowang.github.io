@@ -10,10 +10,10 @@ redirect_from:
 
 王凯健  
 University of Science and Technology of China(USTC)  
-  
+
 Personal Information
 ======
-I'm an undergraduate student in the School of Cyber Security, University of Science ad Technology of China(USTC). My current research interets span LLM Server System , Distributed System and Machine Learning Compiler.  
+I'm an undergraduate student in the School of Cyber Security, University of Science ad Technology of China(USTC). My current research interests span LLM Server System , Distributed System and Machine Learning Compiler.  
 Meanwhile, I'm a remote intern at UC San Diego and will do in-person research during summer vacation.
 
 Contacts
