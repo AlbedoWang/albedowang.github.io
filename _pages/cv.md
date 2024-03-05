@@ -20,7 +20,7 @@ Education
 * Core Courses:
   Data Structure and Algorithm, Compiler Theory, Operating System, Algorithm Analysis and Design, Principles of Computers and Embedded Systems, Design and Practice of Information Security I, Computer Network
 
-Honors and Awards
+# Honors and Awards
 
 - **DAS Scholarship**, USTC & DAS-Security Inc., Nov. 2023
 - **Outstanding Student Scholarship**, *Bronze Prize*, USTC, Oct. 2023
