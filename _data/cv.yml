@@ -2,112 +2,96 @@
   type: map
   contents:
     - name: Full Name
-      value: Kaijian Wang
-    - name: Email
-      value: kaijianwang2003 [at] gmail.com, wangkaijian [at] ustc.edu.cn
-    
-    # - name: Date of Birth
-    #   value: 30th August 2003
-    # - name: Languages
-    #   value: Chinese, English
+      value: Albert Einstein
+    - name: Date of Birth
+      value: 14th March 1879
+    - name: Languages
+      value: English, German
 
 - title: Education
   type: time_table
   contents:
-    - title: B.S. in Information Security
-      institution: University of Science and Technology of China, Anhui, China
-      year: 2021 - 2025
-    # - title: PhD
-    #   institution: University of Zurich, Zurich, Switzerland
-    #   year: 1905
-    #   description:
-    #     - Description 1.
-    #     - Description 2.
-    #     - title: Description 3.
-    #       contents:
-    #         - Sub-description 1.
-    #         - Sub-description 2.
+    - title: PhD
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1905
+      description:
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Federal teaching diploma
+      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+      year: 1900
+      description:
+        - Description 1.
+        - Description 2.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Research Intern
-      institution: UC San Diego, USA
-      year: 2024.04 - Now
+    - title: Professor of Theoretical Physics
+      institution: Institute for Advanced Study, Princeton University
+      year: 1933 - 1955
       description:
-        # - Advisors <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
-        - LLM Server System
-    - title: Research Intern
-      institution: WMGroup, USTC, China
-      year: 2023 - 2024
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Visiting Professor
+      institution: California Institute of Technology, Pasadena, California, US
+      year: 1933
       description:
-        - Adivisors <a href="http://staff.ustc.edu.cn/~zhangwm/#">Prof. Weiming Zhang</a>, <a href="http://home.ustc.edu.cn/~chenkj/">Prof. Kejiang Chen</a>
-        - Digital Watermarking, Information Hiding
-    - title: CTF Player
-      institution: USTC-NEBULA, USTC, China
-      year: 2022 - Now
-      description:
-        - Member of <a href="https://www.nebuu.la">USTC-NEBULA</a>
-        - Mainly focus on Misc and Forensics
-    # - title: Professor of Theoretical Physics
-    #   institution: Institute for Advanced Study, Princeton University
-    #   year: 1933 - 1955
-    #   description:
-    #     - Description 1.
-    #     - Description 2.
-    #     - title: Description 3.
-    #       contents:
-    #         - Sub-description 1.
-    #         - Sub-description 2.
+        - Description 1.
+        - Description 2.
 
-- title: Course Projects
+    - title: Director
+      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
+      year: 1917-1933
+
+    - title: Professor of Theoretical Physics
+      institution: Karl-Ferdinand University, Prague, Czechoslovakia
+      year: 1911 - 1917
+      description:
+
+    - title: Associate Professor of Theoretical Physics
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1909 - 1911
+
+- title: Open Source Projects
   type: time_table
   contents:
-    - title: Semantic Guidance for Diffusion Model
-      year: 2024
-      description: 
-        - Conducted a detailed investigation into the semantic guidance of diffusion models, focusing on understanding both the theoretical underpinnings and experimental outcomes.
-        - Identified existing issues within the semantic guidance provided by diffusion models, particularly emphasizing the loss of positional information.
-        - Developed a straightforward method to address the loss of positional information in the semantic guidance of diffusion models, enhancing model accuracy and interpretability.
+    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+      year: 2015-now
+      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 2024
+    - year: 1921
       items:
-        - DAS Scholarship(Top 10 in the department)
-    - year: 2023
+        - Nobel Prize in Physics
+        - Matteucci Medal
+    - year: 2029
       items:
-        - Outstanding Student Scholarship(Bronze)
-    - year: 2022
-      items:
-        - Zhang Zongzhi Scholarship
+        - Max Planck Medal
 
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items:
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
-- title: Teaching Assistant
-  type: time_table
+- title: Academic Interests
+  type: nested_list
   contents:
-    - title: Information Security Design and Practice
-      institution: USTC, China
-      year: 2024
+    - title: Topic 1.
       items:
-        - Information hiding in multimedia and file analysis
-    - title: Data Structure and Algorithm
-      institution: USTC, China
-      year: 2023
+        - Description 1.
+        - Description 2.
+    - title: Topic 2.
+      items:
+        - Description 1.
+        - Description 2.
 
 - title: Other Interests
   type: list
   contents:
-    # - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
-    - <u>Anime:</u> Mushoku Tensei, Oshinoko, etc.
+    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.

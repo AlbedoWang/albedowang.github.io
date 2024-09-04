@@ -509,8 +509,6 @@ footer.sticky-bottom {
 
 // Blog
 
-// NOTE(KJ.W): Change blog header size here (h1)
-
 .header-bar {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
@@ -519,7 +517,7 @@ footer.sticky-bottom {
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 3rem;
+    font-size: 5rem;
   }
 }
 
