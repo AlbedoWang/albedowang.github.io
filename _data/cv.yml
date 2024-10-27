@@ -45,7 +45,6 @@
       year: 2024 - Now
       description:
         - Advisors <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
-        - DLRM System
         - We proposed a novel solution to optimize DLRM training on disaggregated memory, achieving an average speedup of 2.37× over traditional frameworks leveraging host DRAM and outperformed state-of-the-art GPU-only DLRM training frameworks.
         - Our approach leverages CXL technology for flexible memory expansion and introduces an access-aware strategy for embedding placement and communication routing.
         - I was responsible for formulating the approach, designing and coding the solver, and running the experiments to validate our solution.
