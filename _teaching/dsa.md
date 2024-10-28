@@ -9,4 +9,4 @@ related_publications: False
 giscus_comments: False
 ---
 
-There are no additional materials for this course apart from the textbook. You can refer to previous years' lab code from [my GitHub repository](https://github.com/AlbedoWang/DataStructure-and-Algorithm).
+There is no additional material for this course apart from the textbook. You can refer to previous years' lab code from [my GitHub repository](https://github.com/AlbedoWang/DataStructure-and-Algorithm).
