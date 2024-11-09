@@ -11,7 +11,7 @@ categories: CTF
 > Author: 夏和小(阿贝多), Overall Rank 29 /2460 (Score: 5800), USTC Rank 5 /389
 > 在西七区上分每次早上一起床就发现被猛超，就只能趁国内的盆友们睡觉的时候偷分了😋
 
-![Hackergame_Socre](assets/img/hackergame_score.png)
+![Hackergame_Socre](img/hackergame_score.png)
 
 ## 签到
 
