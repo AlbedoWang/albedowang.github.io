@@ -3,8 +3,10 @@
   contents:
     - name: Full Name
       value: Kaijian Wang
-    - name: Email
-      value: kaijianwang2003 [at] gmail.com, wangkaijian [at] ustc.edu.cn
+    - name: Emails
+      value: kaw072 [AT] ucsd.edu, wangkaijian [AT] mail.ustc.edu.cn <br>kaijianwang2003 [AT] gmail.com
+    - name: Twitter(X)
+      value: <a href="https://x.com/Kaijian_Wang">@Kaijian_Wang</a>
     
     # - name: Date of Birth
     #   value: 30th August 2003
@@ -27,6 +29,10 @@
     #       contents:
     #         - Sub-description 1.
     #         - Sub-description 2.
+- title: Publications
+  type: list
+  contents:
+    - <b>RecDM:</b> Efficient Training System for Large-Scale Recommendation Models on Disaggregated Memory. <i>(Under Review)</i><br><i>Z.Wang, Z.Yu, <u>K.Wang</u>, Y.Lin, Y.Li, L.Liu, X.Tang, Y.Wang, Y.Kang, Y.Ding</i>
 
 - title: Experience
   type: time_table
@@ -39,16 +45,16 @@
         - We developed an inference method combining speculative models with a tool engine, speculative model engine, and LLM decoding engine to optimize memory allocation and request scheduling, significantly improving the efficiency of CoT and tool-usage LLM inference serving.
         - Achieved 30-40% speedup over using only large models by incorporating collaborative reasoning between large and small models on the overall improvement.
         - I played a key role in implementing the entire code framework over vLLM, writing over 5k lines of Python code and around 1k lines of CUDA/C++ code, profiling system data, performing evaluations and optimizing inefficient kernel to achieve a 2x speedup on this kernel.
-        - NOTE: In submission, OSDI 2025
+        - <b>NOTE:</b> Preparing for submission, OSDI 2025
     - title: Research on DLRM System
       institution: UC San Diego, USA
       year: 2024 - Now
       description:
         - Advisors <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
-        - We proposed a novel solution to optimize DLRM training on disaggregated memory, achieving an average speedup of 2.37× over traditional frameworks leveraging host DRAM and outperformed state-of-the-art GPU-only DLRM training frameworks.
+        - We proposed a novel solution to optimize DLRM training on disaggregated memory, achieving an average speedup of 5.34× over traditional frameworks leveraging host DRAM and outperformed state-of-the-art GPU-only DLRM training frameworks.
         - Our approach leverages CXL technology for flexible memory expansion and introduces an access-aware strategy for embedding placement and communication routing.
         - I was responsible for formulating the approach, designing and coding the solver, and running the experiments to validate our solution.
-        - NOTE: In submission, ISCA 2025
+        - <b>NOTE:</b> Under Review, ISCA 2025
     - title: Research on Robust Image Watermark
       institution: WMGroup, USTC, China
       year: 2023 - 2024
@@ -104,11 +110,12 @@
   contents:
     - year: 2024
       items:
+        - <b>Top 5th(~1.5%)</b> in Hackergame2024
         - 3rd prize(~20%) in D^3CTF
         - Top 9th(~1%) in L3HCTF
     - year: 2023
       items:
-        - Top 3rd(~1%) in TPCTF
+        - <b>Top 3rd(~1%)</b> in TPCTF
         - 3rd prize(~20%) in D^3CTF
         - 3rd prize(~6.5%) in Hackergame2023
 

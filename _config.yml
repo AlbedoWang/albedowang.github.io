@@ -132,8 +132,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: AlbedoWang's Blog # blog_name will be displayed in your blog page
-blog_description: CTF and Research blogs # blog_description will be displayed in your blog page
+blog_name: My Blogs # blog_name will be displayed in your blog page
+blog_description: CTF and Research # blog_description will be displayed in your blog page
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -311,8 +311,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["Misc", "MLsys", "code"] # these tags will be displayed on the front page of your blog
-display_categories: ["paper reading", "CTF"] # these categories will be displayed on the front page of your blog
+display_tags: ["Misc", "MLsys", "Code"] # these tags will be displayed on the front page of your blog
+display_categories: ["Paper Reading", "CTF"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
