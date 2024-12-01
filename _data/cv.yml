@@ -45,7 +45,7 @@
         - We developed an inference method combining speculative models with a tool engine, speculative model engine, and LLM decoding engine to optimize memory allocation and request scheduling, significantly improving the efficiency of CoT and tool-usage LLM inference serving.
         - Achieved 30-40% speedup over using only large models by incorporating collaborative reasoning between large and small models on the overall improvement.
         - I played a key role in implementing the entire code framework over vLLM, writing over 5k lines of Python code and around 1k lines of CUDA/C++ code, profiling system data, performing evaluations and optimizing inefficient kernel to achieve a 2x speedup on this kernel.
-        - <b>NOTE:</b> Preparing for submission, OSDI 2025
+        - <b>NOTE:</b> Preparing for submission, SOSP 2025
     - title: Research on DLRM System
       institution: UC San Diego, USA
       year: 2024 - Now
@@ -59,7 +59,7 @@
       institution: WMGroup, USTC, China
       year: 2023 - 2024
       description:
-        - Adivisors <a href="http://staff.ustc.edu.cn/~zhangwm/#">Prof. Weiming Zhang</a>, <a href="http://home.ustc.edu.cn/~chenkj/">Prof. Kejiang Chen</a>
+        - Adivisors <a href="http://home.ustc.edu.cn/~chenkj/">Dr. Kejiang Chen</a>
         - Proposed a watermark recovery module based on image hiding, designed to restore information-embedded images subjected to cropping and spatial manipulation. 
         - Completed experiments on the reproduction of related research and developed the code for the module framework as proposed by coworker.
     # - title: Research Intern
