@@ -24,6 +24,6 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 I am currently an undergraduate at the University of Science and Technology of China (USTC), majoring in Information Security. During my studies, I have been an active member of the [USTC-NEBULA](https://www.nebuu.la) team, an experience I thoroughly enjoyed.
 
-Currently, I am honored to work with Professor [Yufei Ding’s group](https://picassolab.squarespace.com)(UC San Diego) on **ML systems**, focusing on **LLM serving systems** and **DLRM**. I am also collaborating with Professor [Kejiang Chen](http://home.ustc.edu.cn/~chenkj/) at USTC.
+Currently, I am honored to work with Prof. [Yufei Ding’s group](https://picassolab.squarespace.com)(UC San Diego) on **ML systems**, focusing on **LLM serving systems** and **DLRM**. I am also collaborating with Dr. [Kejiang Chen](http://home.ustc.edu.cn/~chenkj/) at USTC.
 
 I am applying to CS PhD programs for Fall 2025 and am actively seeking a 6-month industry internship in ML systems, starting around March 2025. Please feel free to reach out!
