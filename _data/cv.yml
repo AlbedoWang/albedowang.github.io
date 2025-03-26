@@ -4,7 +4,7 @@
     - name: Full Name
       value: Kaijian Wang
     - name: Emails
-      value: kaw072 [AT] ucsd.edu, wangkaijian [AT] mail.ustc.edu.cn <br>kaijianwang2003 [AT] gmail.com
+      value: wangkaijian [AT] mail.ustc.edu.cn <br>kaijianwang2003 [AT] gmail.com
     - name: Twitter(X)
       value: <a href="https://x.com/Kaijian_Wang">@Kaijian_Wang</a>
     
@@ -42,19 +42,19 @@
       year: 2024 - Now
       description:
         - Advisors <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
-        - We developed an inference method combining speculative models with a tool engine, speculative model engine, and LLM decoding engine to optimize memory allocation and request scheduling, significantly improving the efficiency of CoT and tool-usage LLM inference serving.
-        - Achieved 30-40% speedup over using only large models by incorporating collaborative reasoning between large and small models on the overall improvement.
-        - I played a key role in implementing the entire code framework over vLLM, writing over 5k lines of Python code and around 1k lines of CUDA/C++ code, profiling system data, performing evaluations and optimizing inefficient kernel to achieve a 2x speedup on this kernel.
-        - <b>NOTE:</b> Preparing for submission, SOSP 2025
+        # - We developed an inference method combining speculative models with a tool engine, speculative model engine, and LLM decoding engine to optimize memory allocation and request scheduling, significantly improving the efficiency of CoT and tool-usage LLM inference serving.
+        # - Achieved 30-40% speedup over using only large models by incorporating collaborative reasoning between large and small models on the overall improvement.
+        # - I played a key role in implementing the entire code framework over vLLM, writing over 5k lines of Python code and around 1k lines of CUDA/C++ code, profiling system data, performing evaluations and optimizing inefficient kernel to achieve a 2x speedup on this kernel.
+        # - <b>NOTE:</b> Preparing for submission, SOSP 2025
     - title: Research on DLRM System
       institution: UC San Diego, USA
       year: 2024 - Now
       description:
         - Advisors <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
-        - We proposed a novel solution to optimize DLRM training on disaggregated memory, achieving an average speedup of 5.34× over traditional frameworks leveraging host DRAM and outperformed state-of-the-art GPU-only DLRM training frameworks.
-        - Our approach leverages CXL technology for flexible memory expansion and introduces an access-aware strategy for embedding placement and communication routing.
-        - I was responsible for formulating the approach, designing and coding the solver, and running the experiments to validate our solution.
-        - <b>NOTE:</b> Under Review, ISCA 2025
+        # - We proposed a novel solution to optimize DLRM training on disaggregated memory, achieving an average speedup of 5.34× over traditional frameworks leveraging host DRAM and outperformed state-of-the-art GPU-only DLRM training frameworks.
+        # - Our approach leverages CXL technology for flexible memory expansion and introduces an access-aware strategy for embedding placement and communication routing.
+        # - I was responsible for formulating the approach, designing and coding the solver, and running the experiments to validate our solution.
+        # - <b>NOTE:</b> Under Review, ISCA 2025
     - title: Research on Robust Image Watermark
       institution: WMGroup, USTC, China
       year: 2023 - 2024
@@ -94,16 +94,16 @@
     - title: Tiny-C Compiler
       year: 2024
       description:
-        - Developed a simplified C compiler in C, implementing lexical analysis, syntax analysis, and Intermediate Representation (IR) generation for the Tiny-C language.
-        - Supported key C language features in Tiny-C, including assignment, arithmetic operations, while loops, and if-else statements.
-        - Github repo <a href="https://github.com/AlbedoWang/Tiny-C-Compiler">Tiny-C Compiler</a>
+        # - Developed a simplified C compiler in C, implementing lexical analysis, syntax analysis, and Intermediate Representation (IR) generation for the Tiny-C language.
+        # - Supported key C language features in Tiny-C, including assignment, arithmetic operations, while loops, and if-else statements.
+        # - Github repo <a href="https://github.com/AlbedoWang/Tiny-C-Compiler">Tiny-C Compiler</a>
     - title: Semantic Guidance for Diffusion Model
       year: 2024
       description: 
-        - Conducted a detailed investigation into the semantic guidance of diffusion models, focusing on understanding both the theoretical underpinnings and experimental outcomes.
-        - Identified existing issues within the semantic guidance provided by diffusion models, particularly emphasizing the loss of positional information.
-        - Developed a straightforward method to address the loss of positional information in the semantic guidance of diffusion models, enhancing model accuracy and interpretability.
-        - Blog post <a href="https://0xd009.github.io/posts/对扩散模型中基于注意力的语义引导的效果探究/">Semantic Guidance for Diffusion Model</a>
+        # - Conducted a detailed investigation into the semantic guidance of diffusion models, focusing on understanding both the theoretical underpinnings and experimental outcomes.
+        # - Identified existing issues within the semantic guidance provided by diffusion models, particularly emphasizing the loss of positional information.
+        # - Developed a straightforward method to address the loss of positional information in the semantic guidance of diffusion models, enhancing model accuracy and interpretability.
+        # - Blog post <a href="https://0xd009.github.io/posts/对扩散模型中基于注意力的语义引导的效果探究/">Semantic Guidance for Diffusion Model</a>
 
 - title: Selected CTF Awards
   type: time_table
