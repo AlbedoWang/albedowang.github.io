@@ -4,7 +4,7 @@
     - name: Full Name
       value: Kaijian Wang
     - name: Emails
-      value: wangkaijian [AT] mail.ustc.edu.cn <br>kaijianwang2003 [AT] gmail.com
+      value: kaijian.wang [AT] rice.edu <br>kaijianwang2003 [AT] gmail.com
     - name: Twitter(X)
       value: <a href="https://x.com/Kaijian_Wang">@Kaijian_Wang</a>
     
@@ -16,7 +16,10 @@
 - title: Education
   type: time_table
   contents:
-    - title: B.S. in Information Security
+    - title: Ph.D. student in Computer Science
+      institution: Rice University, Texas, USA
+      year: 2025 - Now
+    - title: B.E. in Information Security
       institution: University of Science and Technology of China, Anhui, China
       year: 2021 - 2025
     # - title: PhD
@@ -32,14 +35,28 @@
 - title: Publications
   type: list
   contents:
-    - <b>RecDM:</b> Efficient Training System for Large-Scale Recommendation Models on Disaggregated Memory. <i>(Under Review)</i><br><i>Z.Wang, Z.Yu, <u>K.Wang</u>, Y.Lin, Y.Li, L.Liu, X.Tang, Y.Wang, Y.Kang, Y.Ding</i>
+    - <b>RecDM:</b> Efficient Training System for Large-Scale Recommendation Models on Disaggregated Memory. <i>(Preparation for resubmission)</i><br><i>Z.Wang, Z.Yu, <u>K.Wang</u>, Y.Lin, Y.Li, L.Liu, X.Tang, Y.Wang, Y.Kang, Y.Ding</i>
+    - <b>SuperGen:</b> An Efficient Ultra-high-resolution Video Generation System with Sketching and Tiling. <i>(arXiv preprint)</i><br><i>F. Ye, Z. Zhao, Y. Mu, and J. Shen, R. Li, <u>K. Wang</u>, D. Sun, S. Agarwal, M. Lee, T. Cao, A. Akella, A. Krishnamurthy, T. S. E. Ng, Z. Tu, Y. Wang</i>
 
 - title: Experience
   type: time_table
   contents:
+    - title: Diffusion and MLLM-RAG foundation on TPU
+      institution: Rice, USA
+      year: 2025
+      description:
+        - Advisor <a href="https://www.wang-yuke.com/">Prof. Yuke Wang</a>.
+        - On-going project collaborating with Google TPU Group
+
+    - title: Research on Efficient Diffusion Video Generation 
+      institution: Rice, USA
+      year: 2025
+      description:
+        - Advisor <a href="https://www.wang-yuke.com/">Prof. Yuke Wang</a>
+
     - title: Research on LLM Serving System
       institution: UC San Diego, USA
-      year: 2024 - Now
+      year: 2024
       description:
         - Advisor <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
         # - We developed an inference method combining speculative models with a tool engine, speculative model engine, and LLM decoding engine to optimize memory allocation and request scheduling, significantly improving the efficiency of CoT and tool-usage LLM inference serving.
@@ -48,7 +65,7 @@
         # - <b>NOTE:</b> Preparing for submission, SOSP 2025
     - title: Research on DLRM System
       institution: UC San Diego, USA
-      year: 2024 - Now
+      year: 2024
       description:
         - Advisor <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
         # - We proposed a novel solution to optimize DLRM training on disaggregated memory, achieving an average speedup of 5.34× over traditional frameworks leveraging host DRAM and outperformed state-of-the-art GPU-only DLRM training frameworks.
@@ -59,7 +76,7 @@
       institution: WMGroup, USTC, China
       year: 2023 - 2024
       description:
-        - Adivisor <a href="http://home.ustc.edu.cn/~chenkj/">Dr. Kejiang Chen</a>
+        - Adivisor <a href="http://home.ustc.edu.cn/~chenkj/">Prof. Kejiang Chen</a>
         # - Proposed a watermark recovery module based on image hiding, designed to restore information-embedded images subjected to cropping and spatial manipulation. 
         # - Completed experiments on the reproduction of related research and developed the code for the module framework as proposed by coworker.
     # - title: Research Intern
@@ -122,6 +139,10 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2025
+      items:
+        - Rice Graduate Fellowship
+        - USTC-Fellowship (~7.5k USD)
     - year: 2024
       items:
         - Outstanding Student Scholarship
@@ -147,6 +168,9 @@
 - title: Teaching Assistant
   type: time_table
   contents:
+    - title: Cybersecurity Base Experiments
+      institution: USTC, China
+      year: 2025
     - title: Information Security Design and Practice
       institution: USTC, China
       year: 2024

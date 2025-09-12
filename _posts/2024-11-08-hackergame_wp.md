@@ -10,7 +10,7 @@ categories: CTF
 
 > Author: 夏和小(阿贝多), Overall Rank 29 /2460 (Score: 5800), USTC Rank 5 /389
 >
-> 在西七区上分每次早上一起床就发现被猛超，就只能趁国内的盆友们睡觉的时候偷分了😋
+> Competing in UTC-7 meant every morning I woke up to find myself heavily outranked, so I could only steal points while friends in China were asleep 😋
 
 {% include figure.liquid loading="eager" path="assets/img/hg_rank.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
@@ -18,11 +18,11 @@ categories: CTF
 
 ## 签到
 
-改 URL 为 `http://202.38.93.141:12024/?pass=true`
+Change URL to `http://202.38.93.141:12024/?pass=true`
 
 ## 喜欢做签到的 CTFer 你们好呀
 
-这不是我们 [NEBULA](https://www.nebuu.la) 的主页吗，下次拿出来要标明出处【唐氏表情.jpg】
+Isn’t this our [NEBULA](https://www.nebuu.la) homepage? Next time, cite your sources【funny face.jpg】
 
 ```shell
 $ ENV
@@ -40,32 +40,38 @@ flag{0k_175_a_h1dd3n_s3c3rt_f14g___please_join_us_ustc_nebula_anD_two_maJor_requ
 
 ## 猫咪问答（Hackergame 十周年纪念版）
 
-1.  在 Hackergame 2015 比赛开始前一天晚上开展的赛前讲座是在哪个教室举行的？
-    - 翻 LUG 网站 -> 3A204
-2.  众所周知，Hackergame 共约 25 道题目。近五年（不含今年）举办的 Hackergame 中，题目数量最接近这个数字的那一届比赛里有多少人注册参加？
-    - 翻 Github 和 LUG 网站 -> 2682
-3.  Hackergame 2018 让哪个热门检索词成为了科大图书馆当月热搜第一？
-    - 翻 2018 年猫咪问答 -> 程序员的自我修养
-4.  在今年的 USENIX Security 学术会议上中国科学技术大学发表了一篇关于电子邮件伪造攻击的论文，在论文中作者提出了 6 种攻击方法，并在多少个电子邮件服务提供商及客户端的组合上进行了实验？
-    - 看不进去，扔个 GPT -> 336
-5.  10 月 18 日 Greg Kroah-Hartman 向 Linux 邮件列表提交的一个 patch 把大量开发者从 MAINTAINERS 文件中移除。这个 patch 被合并进 Linux mainline 的 commit id 是多少？
-    - 谷歌 -> 6e90b6
-6.  大语言模型会把输入分解为一个一个的 token 后继续计算，请问这个网页的 HTML 源代码会被 Meta 的 Llama 3 70B 模型的 tokenizer 分解为多少个 token？
-    - 特地跑过去申请了一个 Llama3 的 token，跑出来 1834... 应该是哪里出问题了，从 1830 开始试 -> 1833
-      *PS:后来在QQ群里看到有人发了原因，是tokenizer会在结束的地方加一个EOS导致的1834*
+1. Where was the pre-contest lecture for Hackergame 2015 held the night before the contest started?
 
-*flag{α_90oD_C@7_!$_7hE_©a7_WHO_©@n_Pas5_THe_Qui2}*
-*flag{t3n_¥eArs_Oƒ_hαCK3rG@me_OMed37Oบ_wiTh_И3K0_Qu!Z}*
+   * Checked the LUG website -> 3A204
+2. Hackergame usually has about 25 challenges. In the past five years (excluding this year), in the edition with the number of problems closest to this, how many participants registered?
+
+   * Checked GitHub and LUG website -> 2682
+3. Hackergame 2018 made which keyword the #1 search in USTC’s library that month?
+
+   * Checked 2018 Cat Quiz -> Programmer’s Self-Cultivation
+4. At USENIX Security this year, USTC published a paper on email spoofing attacks. The authors proposed 6 attack methods and experimented on how many provider-client combinations?
+
+   * Couldn’t read, threw to GPT -> 336
+5. On October 18, Greg Kroah-Hartman submitted a patch to Linux mailing list removing many developers from MAINTAINERS. What was the commit id when it was merged into mainline?
+
+   * Googled -> 6e90b6
+6. LLMs tokenize input into tokens. How many tokens would Meta’s Llama 3 70B tokenizer produce for this page’s HTML source code?
+
+   * Ran it myself with a Llama3 token -> got 1834, realized issue, tried 1833
+     *PS: Later saw in QQ group it was because tokenizer adds an EOS, so 1834*
+
+*flag{α\_90oD\_C\@7\_!\$*7hE*©a7\_WHO\_©@n\_Pas5\_THe\_Qui2}*
+*flag{t3n\_¥eArs\_Oƒ\_hαCK3rG\@me\_OMed37Oบ\_wiTh\_И3K0\_Qu!Z}*
 
 ## 每日论文太多了！
 
-直接搜 flag 发现了 `flag here` 但是没看到别的东西了，索性找个分离图片的工具试试
+Searched “flag” and saw `flag here` but nothing else, so tried extracting images:
 
 ```shell
 pdfimages -all flag_paper.pdf output
 ```
 
-发现一张图片里面有 flag
+Found a flag in one of the images.
 
 ## 比大小王
 
@@ -95,7 +101,7 @@ for question in game_questions:
         print("Error")
 
 session.headers['Content-Type'] = "application/json"
-time.sleep(10) # 防止经典时空穿越
+time.sleep(10) # Prevent time travel
 print(session.post(URL + submit_route, json={"inputs":  ans}).json())
 ```
 
@@ -112,11 +118,11 @@ PowerfulShell@hackergame> $_6 $_3$_7 # cat /flag
 flag{N0w_I_Adm1t_ur_tru1y_5He11_m4ster_da95bf98fc}
 ```
 
-拼就完了，但是我开始是不知道 `$_2 $_3` 会返回 eval 后的结果的，运气好试出来的 ：））））
+Just piecing it together. At first I didn’t know `$_2 $_3` would evaluate—luckily I guessed right :）））
 
 ## PaoluGPT
 
-简单的 SQL 注入
+Simple SQL injection
 
 ```python
 import requests
@@ -155,11 +161,8 @@ print(view)
 
 ## 强大的正则表达式
 
-学过的编译原理最有用的一集（虽然最后还是用的传奇轮子 `greenery`,简直是我爹
-
-这里只给最后一问的 exp，因为三个都是一样的，只需要改一下 `alphabet` 和 `state` 以及 `map` 就可以
-
-最后一问主要就是要注意到 `CRC GSM8` 也是有固定的状态转换的，所以就和前两纹眉有任何区别，手动写一份/写脚本生成一个 `map` 就可以。
+Compiler theory at its finest (though I ended up using `greenery`, my savior).
+Here’s the last part’s exploit only...
 
 ```python
 from greenery.fsm import fsm
@@ -206,7 +209,7 @@ conn.interactive()
 
 ## 惜字如金 3.0
 
-因为服务器会返回计算的哈希，所以其实可以随便找一行输入一个 `\x7f` 即 `0b01111111` 来直接得到 `flip` 的值（这里要简单逆一下 `CRC` 的计算，主要是要注意到 `\x7f` 输入进去后得到的结果是 `flip` 没有经过任何移位异或的结果
+Since the server returns the computed hash, you can actually input any line with a `\x7f` (i.e., `0b01111111`) to directly obtain the value of `flip` (here you just need to simply reverse the `CRC` calculation; the key point is that after inputting `\x7f`, the result you get is the value of `flip` without any bit-shifting or XOR applied).
 
 ```python
 # EXP 1: Recover Python code mannually
@@ -272,7 +275,7 @@ poly = 'B' + reverse_poly(flip, 48)
 
 ## 优雅的不等式
 
-刷知乎最有用的一集，帖子在[这里](https://zhuanlan.zhihu.com/p/450355422?utm_psn=1838583662888742912)公式如下
+Found the formula on Zhihu [here](https://zhuanlan.zhihu.com/p/450355422?utm_psn=1838583662888742912) Formulations are as follows:
 
 $$
 S_n = \int_0^1 \frac{(x-x^2)^{4n}(a+b\dot x^2)}{(1+x^2)} dx
@@ -285,8 +288,6 @@ $$
 $$
 T_n = \int_0^1 \frac{(x-x^2)^{4n}(a+bx^2)-(-4)^n(a-b)}{(1+x^2)}dx
 $$
-
-然后就是搓代码
 
 ```python
 import sympy as sp
@@ -373,7 +374,7 @@ for round in range(40):
 
 ## 不太分布式的软总线
 
-我是 prompt engineering 大师，GPT-o1 爆了这道题
+I’m a prompt engineering master—GPT-o1 cracked this one.
 
 ### What DBus Gonna Do?
 
@@ -406,7 +407,6 @@ int main() {
     GDBusConnection *connection;
     GVariant *result;
 
-    // 连接到 DBus 系统总线
     connection = g_bus_get_sync(G_BUS_TYPE_SYSTEM, NULL, &error);
     if (!connection) {
         g_printerr("Failed to connect to the system bus: %s\n", error->message);
@@ -414,7 +414,6 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    // 创建内存中的管道，直接写入请求内容 "Please give me flag2\n"
     int pipe_fds[2];
     if (pipe(pipe_fds) == -1) {
         perror("Failed to create pipe");
@@ -422,8 +421,8 @@ int main() {
     }
     
     const char *request = "Please give me flag2\n";
-    ssize_t written = write(pipe_fds[1], request, 21);  // 确保写入 21 个字节，包括换行符
-    close(pipe_fds[1]); // 关闭写端，只保留读端
+    ssize_t written = write(pipe_fds[1], request, 21); 
+    close(pipe_fds[1]); 
 
     if (written != 21) {
         fprintf(stderr, "Failed to write the full message to the pipe\n");
@@ -431,7 +430,6 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    // 使用 DBus 调用 GetFlag2 方法，传递文件描述符
     GUnixFDList *fd_list = g_unix_fd_list_new_from_array(&pipe_fds[0], 1);
     result = g_dbus_connection_call_with_unix_fd_list_sync(
         connection,
@@ -483,7 +481,6 @@ int main() {
 #define INTERFACE "cn.edu.ustc.lug.hack.FlagService"
 
 int main() {
-    // 使用 exec 调整进程名为 "getflag3"
     if (prctl(PR_SET_NAME, "getflag3", 0, 0, 0) != 0) {
         perror("Failed to set process name");
         return EXIT_FAILURE;
@@ -493,7 +490,6 @@ int main() {
     GDBusConnection *connection;
     GVariant *result;
 
-    // 连接到 DBus 系统总线
     connection = g_bus_get_sync(G_BUS_TYPE_SYSTEM, NULL, &error);
     if (!connection) {
         g_printerr("Failed to connect to the system bus: %s\n", error->message);
@@ -501,22 +497,20 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    // 调用 GetFlag3 方法
     result = g_dbus_connection_call_sync(
         connection,
         DEST,
         OBJECT_PATH,
         INTERFACE,
         METHOD,
-        NULL,  // 无参数
-        G_VARIANT_TYPE("(s)"),  // 期望返回类型为字符串
+        NULL, 
+        G_VARIANT_TYPE("(s)"),
         G_DBUS_CALL_FLAGS_NONE,
         -1,
         NULL,
         &error
     );
 
-    // 检查返回结果
     if (result) {
         gchar *flag;
         g_variant_get(result, "(s)", &flag);
@@ -535,7 +529,7 @@ int main() {
 
 ## 动画分享
 
-不明不白的就出了第一个 `flag`，就简单尝试了下疯狂 fork
+Got the first flag mysteriously, then just tried mass forking.
 
 ```C
 #include <stdio.h>
@@ -553,12 +547,10 @@ int main() {
         pid_t pid = fork();
 
         if (pid < 0) {
-            // fork 失败说明到 PID 上限了，保持主进程执行
             sleep(100);
         }
 
         if (pid == 0) {
-            // 子进程
             int sock = socket(AF_INET, SOCK_STREAM, 0);
             if (sock < 0) continue;
 
@@ -579,7 +571,7 @@ int main() {
 
 ## 关灯
 
-经典 `z3`, 前三个的 exp 都一样
+Classic `z3`, same exploit for first three challenges.
 
 ```python
 from z3 import *
@@ -647,9 +639,9 @@ print("Solution:", solution)
 
 ## 禁止内卷
 
-我做的比较暴力，开始是尝试 inference 出来（没注意到加了 sanity），失败了 ~~听说有人可以 inference 出来，挺厉害的~~
+I took a rather brute-force approach. At first, I tried to infer the answer (didn't notice there was a sanity check), but failed. ~~I heard someone managed to infer it, which is impressive.~~
 
-因为题目里写了 `flask run --reload --host 0`，所以开始是尝试结合路径穿越漏洞上传一个新的 `secrets.py` 到运行目录下替换函数的，后来发现好像 `reload` 是不可以 `reload` 已经 import 的内容的遂失败（也可能是单纯的我搞错了），后面就直接路径穿越暴力覆盖 `app.py`，成功了
+Since the challenge mentioned `flask run --reload --host 0`, I first tried to exploit a path traversal vulnerability to upload a new `secrets.py` to the running directory to replace the function. Later, I found that `reload` doesn't seem to reload already imported content, so that failed (or maybe I just got it wrong). In the end, I simply used path traversal to forcibly overwrite `app.py`, and that worked.
 
 ```python
 import requests
@@ -741,13 +733,13 @@ print(response.text)
 
 ## 神秘代码 2
 
-只做出来了第一个，打开后发现后面有一串看上去像 base64 字母表的东西，尝试了下换表 base64 就出了
+Only solved the first one. Saw what looked like a base64 alphabet later, tried custom base64 decode, got the flag.
 
-## AI（名字太长了不抄了）
+## AI (Name Too Long to Copy)
 
-这下是老本行了（bushi，改了下 `llama_cpp/llama.py`，感觉没必要像官方解答那样 general，数理基础有些过于强大了（bushi，我选择直接手摇，其实用改过的 code 去手摇也就十分钟不到的事，直接调用 `generate` 这个 API 就可以，它已经做好了 KV Cache 之类的工作，还挺省时间的，最终在 H100 上一两分钟生成答案。
+This one was right up my alley (just kidding). I modified `llama_cpp/llama.py`—felt there was no need to make it as general as the official solution, which was a bit too mathematically sophisticated (just kidding). I chose to do it manually; with the modified code, it only took about ten minutes to step through by hand. Just call the `generate` API, which already handles things like the KV Cache, so it saves a lot of time. In the end, it took just a minute or two to generate the answer on an H100.
 
-主要思路就是扔掉概率 $$P < 0.05$$ 的 token(唯一的例外是那个 `dazzling` 手动 patch 掉就可以) ，剩下的就是手摇 ：）））））
+The main idea was to discard tokens with probability $$P < 0.05$$ (the only exception was manually patching for `dazzling`), and then just step through the rest by hand :))))
 
 ```python
 class Llama():
@@ -834,7 +826,7 @@ class Llama():
         ...
 ```
 
-然后跑
+Then run:
 
 ```python
 import hashlib
@@ -890,4 +882,4 @@ messages = prompt
 print(response)
 ```
 
-PS: 这个题有一点非常坑，卡了我半天，就是它的 `showcase` 和 `show off` 长度相同而且推理出来的概率是均等的，只能靠手试，一共出现了三次，所以有 $$2^3=8$$ 种情况，还好它给了哈希，不至于到最后我也做不出来...
+PS: A tricky part—it alternated between “showcase” and “show off” with equal probability, same length. Could only brute-force test. Luckily hash was given, or I’d never solve it...
