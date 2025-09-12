@@ -3,6 +3,7 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+.devcontainer
 .DS_store
 .ruby-version
 .tweet-cache
@@ -10,4 +11,5 @@ Gemfile.lock
 assets/libs/
 node_modules/
 vendor
+Gemfile.lock
 .idea
