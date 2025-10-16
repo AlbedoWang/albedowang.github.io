@@ -35,7 +35,7 @@
 - title: Publications
   type: list
   contents:
-    - <b>RecDM:</b> Efficient Training System for Large-Scale Recommendation Models on Disaggregated Memory. <i>(Preparation for resubmission)</i><br><i>Z.Wang, Z.Yu, <u>K.Wang</u>, Y.Lin, Y.Li, L.Liu, X.Tang, Y.Wang, Y.Kang, Y.Ding</i>
+    - <b>RecDM:</b> Efficient Training System for Large-Scale Recommendation Models on Disaggregated Memory. <i>(Preparing for submission)</i><br><i>Z.Wang, Z.Yu, <u>K.Wang</u>, Y.Lin, Y.Li, L.Liu, X.Tang, Y.Wang, Y.Kang, Y.Ding</i>
     - <b>SuperGen:</b> An Efficient Ultra-high-resolution Video Generation System with Sketching and Tiling. <i>(arXiv preprint)</i><br><i>F. Ye, Z. Zhao, Y. Mu, and J. Shen, R. Li, <u>K. Wang</u>, D. Sun, S. Agarwal, M. Lee, T. Cao, A. Akella, A. Krishnamurthy, T. S. E. Ng, Z. Tu, Y. Wang</i>
 
 - title: Experience
