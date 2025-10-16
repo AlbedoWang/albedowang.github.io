@@ -58,7 +58,7 @@
       institution: UC San Diego, USA
       year: 2024
       description:
-        - Advisor <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
+        - Advisor <a href="https://sites.google.com/ucsd.edu/yufeiding/people/prof-yufei-ding?authuser=0">Prof. Yufei Ding</a>
         # - We developed an inference method combining speculative models with a tool engine, speculative model engine, and LLM decoding engine to optimize memory allocation and request scheduling, significantly improving the efficiency of CoT and tool-usage LLM inference serving.
         # - Achieved 30-40% speedup over using only large models by incorporating collaborative reasoning between large and small models on the overall improvement.
         # - I played a key role in implementing the entire code framework over vLLM, writing over 5k lines of Python code and around 1k lines of CUDA/C++ code, profiling system data, performing evaluations and optimizing inefficient kernel to achieve a 2x speedup on this kernel.
@@ -67,7 +67,7 @@
       institution: UC San Diego, USA
       year: 2024
       description:
-        - Advisor <a href="https://picassolab.squarespace.com/yufei">Prof. Yufei Ding</a>
+        - Advisor <a href="https://sites.google.com/ucsd.edu/yufeiding/people/prof-yufei-ding?authuser=0">Prof. Yufei Ding</a>
         # - We proposed a novel solution to optimize DLRM training on disaggregated memory, achieving an average speedup of 5.34× over traditional frameworks leveraging host DRAM and outperformed state-of-the-art GPU-only DLRM training frameworks.
         # - Our approach leverages CXL technology for flexible memory expansion and introduces an access-aware strategy for embedding placement and communication routing.
         # - I was responsible for formulating the approach, designing and coding the solver, and running the experiments to validate our solution.

@@ -24,6 +24,6 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 I am a first-year Ph.D. student in Computer Science at Rice University, advised by Prof. [Yuke Wang](https://www.wang-yuke.com/), working on Efficient **ML Systems**. I received my B.E. in Information Security from the University of Science and Technology of China (USTC), where I was an active member of the [USTC-NEBULA](https://www.nebuu.la) team.
 
-Formerly, I worked with Prof. [Yufei Ding’s group](https://picassolab.squarespace.com)(UC San Diego), focusing on **LLM serving systems** and **DLRM**. I am also collaborating with Prof. [Kejiang Chen](http://home.ustc.edu.cn/~chenkj/) at USTC.
+Formerly, I worked with Prof. [Yufei Ding’s group](https://sites.google.com/ucsd.edu/yufeiding/people/prof-yufei-ding?authuser=0)(UC San Diego), focusing on **LLM serving systems** and **DLRM**. I am also collaborating with Prof. [Kejiang Chen](http://home.ustc.edu.cn/~chenkj/) at USTC.
 
 Actively finding PhD internship for 2026 Summer. My CV: [CV](./Kaijian_Wang_Resume_Intern.pdf)
