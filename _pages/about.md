@@ -26,4 +26,4 @@ I am a first-year Ph.D. student in Computer Science at Rice University, advised 
 
 Formerly, I worked with Prof. [Yufei Ding’s group](https://sites.google.com/ucsd.edu/yufeiding/people/prof-yufei-ding?authuser=0)(UC San Diego), focusing on **LLM serving systems** and **DLRM**. I am also collaborating with Prof. [Kejiang Chen](http://home.ustc.edu.cn/~chenkj/) at USTC.
 
-Actively finding PhD internship for 2026 Summer. My CV: [CV](./Kaijian_Wang_Resume_Intern.pdf)
+Actively finding PhD internship for 2026 Summer. My CV: [CV](./assets/pdf/Kaijian_Wang_Resume_Intern.pdf)
