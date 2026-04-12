@@ -327,9 +327,9 @@ function cmdContact() {
     ["email",    c.email,    c.email ? `mailto:${c.email}` : ""],
     ["github",   c.github,   c.github],
     ["scholar",  c.scholar,  c.scholar],
-    ["twitter",  c.twitter,  c.twitter],
+    ["X",  c.twitter,  c.twitter],
     ["linkedin", c.linkedin, c.linkedin],
-    ["cv",       c.cv,       c.cv],
+    // ["cv",       c.cv,       c.cv], --- IGNORE ---
   ];
   const items = fields
     .filter(([, v]) => v)
@@ -356,7 +356,7 @@ function cmdHelp() {
 
 function cmdCV() {
   window.open(DATA.contact.cv, "_blank", "noopener");
-  printBlock(`<p class="muted">opening CV → <a href="${esc(DATA.contact.cv)}" target="_blank" rel="noopener">${esc(DATA.contact.cv)}</a></p>`);
+  printBlock(`<p class="muted">opening CV → <a href="${esc(DATA.contact.cv)}" target="_blank" rel="noopener">Link</a></p>`);
 }
 
 function cmdClear() {
