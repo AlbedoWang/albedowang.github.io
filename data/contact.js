@@ -9,5 +9,5 @@ window.CONTACT = {
   scholar:  "",  // not listed on source page
   twitter:  "https://twitter.com/Kaijian_Wang",
   linkedin: "https://www.linkedin.com/in/kaijian-wang-9920602b1",
-  cv:       "",
+  cv:       "./assets/Kaijian_Wang_Resume_Intern.pdf",
 };
