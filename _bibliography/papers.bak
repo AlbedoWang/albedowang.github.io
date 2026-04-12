@@ -1,8 +1,0 @@
-@book{not_published,
-  bibtex_show={true},
-  title={currently no publication},
-  author={K.Wang},
-  year={2024},
-  selected={true},
-  preview={cry_emoji.png},
-}
