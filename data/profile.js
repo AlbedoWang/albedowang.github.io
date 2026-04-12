@@ -1,0 +1,1 @@
+window.PROFILE={name:"Kaijian Wang",handle:"kaijian",role:"CS PhD Student",affiliation:"Department of Computer Science, Rice University",advisor:"Prof. Yuke Wang",location:"Houston, TX",email:"kw118 AT rice DOT edu",interests:["Efficient ML Systems","LLM Serving and Training Systems","Distributed Systems"]};
