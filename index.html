@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kaijian Wang — CS PhD</title>
+<meta name="description" content="Personal homepage of Kaijian Wang, CS PhD candidate." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* claude.ai inspired: warm paper background + dark brown text + claude orange */
+    --bg: #faf9f5;       /* page background — warm cream */
+    --bg-soft: #f0eee6;  /* terminal screen — slightly darker cream */
+    --fg: #2c2b28;       /* main text — dark warm near-black */
+    --muted: #8c8a82;    /* secondary text — warm gray */
+    --dim: #b5b2a8;      /* subtle text — lighter warm gray */
+    --accent: #c96442;   /* prompt / commands — claude orange */
+    --accent-2: #8a6240; /* links — muted warm brown */
+    --warn: #b7873a;     /* warnings — warm gold */
+    --err: #bc4a3c;      /* errors — warm red */
+    --selection: #e8e4d4;
+    --border: #e3ddcb;   /* subtle warm border */
+    --titlebar: #eae6d7; /* titlebar — slightly warmer cream */
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 14.5px;
+    line-height: 1.65;
+    min-height: 100%;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 28px 20px 80px;
+  }
+  ::selection { background: var(--selection); }
+  a { color: var(--accent-2); text-decoration: none; border-bottom: 1px dashed transparent; }
+  a:hover { border-bottom-color: var(--accent-2); }
+
+  .terminal {
+    width: 100%;
+    max-width: 860px;
+  }
+  .titlebar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: var(--titlebar);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .dot.r { background: #ed6a5e; }
+  .dot.y { background: #f4bf50; }
+  .dot.g { background: #61c554; }
+  .titlebar .path {
+    margin-left: 10px;
+    color: var(--muted);
+    font-size: 12.5px;
+    user-select: none;
+  }
+  .screen {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 0 0 10px 10px;
+    padding: 22px 22px 18px;
+  }
+
+  #output > * { margin: 0; }
+  .block { margin-bottom: 18px; }
+  .cmd-line { color: var(--muted); margin-bottom: 6px; }
+  .cmd-line .prompt { color: var(--accent); }
+  .cmd-line .cmd { color: var(--fg); }
+
+  h1, h2, h3 { font-weight: 700; margin: 0; }
+  h1 { font-size: 18px; color: var(--fg); }
+  h2 {
+    font-size: 14.5px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+  h2::before { content: "# "; color: var(--dim); }
+  p { margin: 0 0 6px; color: var(--fg); }
+  .muted { color: var(--muted); }
+  .dim { color: var(--dim); }
+  .tag { color: var(--warn); }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { margin: 4px 0; }
+  .row {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .row .when { color: var(--muted); }
+  .row .what strong { color: var(--fg); }
+  .row .what .where { color: var(--accent-2); }
+
+  .pub { margin: 6px 0 10px; }
+  .pub .venue { color: var(--warn); }
+  .pub .authors { color: var(--muted); }
+  .pub .links a { margin-right: 10px; }
+
+  .help-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    row-gap: 2px;
+    column-gap: 10px;
+  }
+  .help-grid .k { color: var(--accent); }
+  .help-grid .v { color: var(--muted); }
+
+  /* input line */
+  .input-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 10px;
+    position: relative;
+  }
+  .input-line .prompt { color: var(--accent); white-space: nowrap; }
+  #input {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    border: none;
+    outline: none;
+    padding: 0;
+    font: inherit;
+  }
+  .input-mirror {
+    flex: 1;
+    color: var(--fg);
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .caret {
+    display: inline-block;
+    min-width: 0.55em;
+    background: var(--fg);
+    color: var(--bg);
+    animation: blink 1.05s steps(1) infinite;
+  }
+  @keyframes blink { 50% { background: transparent; color: inherit; } }
+
+  .hint { color: var(--dim); margin-top: 6px; font-size: 12.5px; }
+  .err { color: var(--err); }
+
+  @media (max-width: 560px) {
+    body { padding: 12px 10px 60px; }
+    .screen { padding: 16px 14px 14px; }
+    .row { grid-template-columns: 1fr; }
+    .row .when { color: var(--muted); }
+    .help-grid { grid-template-columns: 130px 1fr; }
+  }
+</style>
+</head>
+<body>
+  <main class="terminal" aria-label="terminal">
+    <div class="titlebar">
+      <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <span class="path">guest@kaijian-phd:~</span>
+    </div>
+    <div class="screen" id="screen">
+      <div id="output"></div>
+      <div class="input-line" id="inputLine">
+        <span class="prompt">guest@kaijian-phd:~$</span>
+        <span class="input-mirror" id="mirror"><span id="mBefore"></span><span class="caret" id="caret">&nbsp;</span><span id="mAfter"></span></span>
+        <input id="input" autocomplete="off" spellcheck="false" autocapitalize="off" />
+      </div>
+      <div class="hint">type <span style="color:var(--accent)">/help</span> to list commands · use <span style="color:var(--accent)">tab</span> to autocomplete · <span style="color:var(--accent)">↑ / ↓</span> for history</div>
+    </div>
+  </main>
+
+<!-- ============================================================
+     EDIT YOUR CONTENT in the files under ./data/
+     Each file defines one section. Load order matters only in
+     that they must all be loaded before the main script below.
+     ============================================================ -->
+<script src="./data/profile.js"></script>
+<script src="./data/about.js"></script>
+<script src="./data/experience.js"></script>
+<script src="./data/publications.js"></script>
+<script src="./data/projects.js"></script>
+<script src="./data/blogs.js"></script>
+<script src="./data/contact.js"></script>
+<script>
+/* assemble the DATA object from the per-section files above */
+const DATA = {
+  ...window.PROFILE,
+  about:        window.ABOUT,
+  experience:   window.EXPERIENCE,
+  publications: window.PUBLICATIONS,
+  projects:     window.PROJECTS,
+  blogs:        window.BLOGS,
+  contact:      window.CONTACT,
+};
+
+const output    = document.getElementById("output");
+const input     = document.getElementById("input");
+const inputLine = document.getElementById("inputLine");
+const screenEl  = document.getElementById("screen");
+const mBefore   = document.getElementById("mBefore");
+const mAfter    = document.getElementById("mAfter");
+const caretEl   = document.getElementById("caret");
+
+function updateMirror() {
+  const v = input.value;
+  const pos = input.selectionStart ?? v.length;
+  mBefore.textContent = v.slice(0, pos);
+  if (pos < v.length) {
+    caretEl.textContent = v[pos];
+    mAfter.textContent = v.slice(pos + 1);
+  } else {
+    caretEl.innerHTML = "&nbsp;";
+    mAfter.textContent = "";
+  }
+}
+
+const PROMPT = `guest@${DATA.handle}-phd:~$`;
+
+/* ---------- renderers ---------- */
+const esc = (s) =>
+  String(s).replace(/[&<>"']/g, (c) =>
+    ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+
+function printCmd(cmd) {
+  const div = document.createElement("div");
+  div.className = "cmd-line";
+  div.innerHTML = `<span class="prompt">${PROMPT}</span> <span class="cmd">${esc(cmd)}</span>`;
+  output.appendChild(div);
+}
+
+function printBlock(html) {
+  const div = document.createElement("div");
+  div.className = "block";
+  div.innerHTML = html;
+  output.appendChild(div);
+}
+
+function printErr(msg) {
+  const div = document.createElement("div");
+  div.className = "block err";
+  div.textContent = msg;
+  output.appendChild(div);
+}
+
+/* ---------- command bodies ---------- */
+function cmdAbout() {
+  const lines = DATA.about.map((p) => `<p>${p}</p>`).join("");
+  printBlock(`
+    <h2>about</h2>
+    <h1>${esc(DATA.name)} <span class="dim">· ${esc(DATA.role)}</span></h1>
+    <p class="muted">${esc(DATA.affiliation)}</p>
+    <p class="muted">advised by <span style="color:var(--accent-2)">${esc(DATA.advisor)}</span> · ${esc(DATA.location)}</p>
+    <div style="height:6px"></div>
+    ${lines}
+    <div style="height:6px"></div>
+    <p><span class="dim">interests:</span> ${DATA.interests.map((i) => `<span class="tag">${esc(i)}</span>`).join(" · ")}</p>
+  `);
+}
+
+function cmdExperience() {
+  // Prose fields (what / where / note) allow HTML so users can add <a> links.
+  const rows = DATA.experience.map((e) => `
+    <li class="row">
+      <div class="when">${esc(e.when)}</div>
+      <div class="what">
+        <strong>${e.what}</strong> <span class="where">@ ${e.where}</span>
+        ${e.note ? `<div class="muted">${e.note}</div>` : ""}
+      </div>
+    </li>
+  `).join("");
+  printBlock(`<h2>experience</h2><ul>${rows}</ul>`);
+}
+
+function cmdPublications() {
+  // title / authors / venue allow HTML (so you can <strong> your own name, link coauthors, etc.)
+  const items = DATA.publications.map((p) => {
+    const links = (p.links || []).map((l) => `<a href="${esc(l.href)}" target="_blank" rel="noopener">[${esc(l.label)}]</a>`).join(" ");
+    return `
+      <div class="pub">
+        <div><strong>${p.title}</strong></div>
+        <div class="authors">${p.authors}</div>
+        <div><span class="venue">${p.venue}</span> &nbsp; <span class="links">${links}</span></div>
+      </div>
+    `;
+  }).join("");
+  printBlock(`<h2>publications</h2>${items}<p class="dim">* denotes equal contribution.</p>`);
+}
+
+function cmdProjects() {
+  // desc allows HTML
+  const items = DATA.projects.map((p) => `
+    <li>— <a href="${esc(p.href)}" target="_blank" rel="noopener">${esc(p.name)}</a> <span class="muted">— ${p.desc}</span></li>
+  `).join("");
+  printBlock(`<h2>projects</h2><ul>${items}</ul>`);
+}
+
+function cmdBlogs() {
+  // title allows HTML
+  const items = DATA.blogs.map((b) => `
+    <li class="row">
+      <div class="when">${esc(b.date)}</div>
+      <div class="what"><a href="${esc(b.href)}" target="_blank" rel="noopener">${b.title}</a></div>
+    </li>
+  `).join("");
+  printBlock(`<h2>blogs</h2><ul>${items}</ul>`);
+}
+
+function cmdContact() {
+  const c = DATA.contact;
+  const fields = [
+    ["email",    c.email,    c.email ? `mailto:${c.email}` : ""],
+    ["github",   c.github,   c.github],
+    ["scholar",  c.scholar,  c.scholar],
+    ["twitter",  c.twitter,  c.twitter],
+    ["linkedin", c.linkedin, c.linkedin],
+    ["cv",       c.cv,       c.cv],
+  ];
+  const items = fields
+    .filter(([, v]) => v)
+    .map(([label, v, href]) =>
+      `<li><span class="dim">${label} ·</span> <a href="${esc(href)}" target="_blank" rel="noopener">${esc(v)}</a></li>`
+    ).join("");
+  printBlock(`<h2>contact</h2><ul>${items}</ul>`);
+}
+
+function cmdHelp() {
+  const rows = [
+    ["/about",        "who I am"],
+    ["/experience",   "education & research positions"],
+    ["/publications", "papers & preprints"],
+    ["/projects",     "open-source projects"],
+    ["/blogs",        "writing & notes"],
+    ["/contact",      "email & social links"],
+    ["/cv",           "open CV (PDF)"],
+    ["/clear",        "clear the screen"],
+    ["/help",         "show this list"],
+  ].map(([k, v]) => `<div class="k">${k}</div><div class="v">${v}</div>`).join("");
+  printBlock(`<h2>help</h2><div class="help-grid">${rows}</div>`);
+}
+
+function cmdCV() {
+  window.open(DATA.contact.cv, "_blank", "noopener");
+  printBlock(`<p class="muted">opening CV → <a href="${esc(DATA.contact.cv)}" target="_blank" rel="noopener">${esc(DATA.contact.cv)}</a></p>`);
+}
+
+function cmdClear() {
+  output.innerHTML = "";
+}
+
+function cmdWhoami() {
+  printBlock(`<p>${esc(DATA.handle)} · ${esc(DATA.role)} · ${esc(DATA.affiliation)}</p>`);
+}
+
+/* ---------- dispatch ---------- */
+const COMMANDS = {
+  "/about":        cmdAbout,
+  "/experience":   cmdExperience,
+  "/publications": cmdPublications,
+  "/projects":     cmdProjects,
+  "/blogs":        cmdBlogs,
+  "/blog":         cmdBlogs,
+  "/contact":      cmdContact,
+  "/cv":           cmdCV,
+  "/help":         cmdHelp,
+  "/?":            cmdHelp,
+  "/clear":        cmdClear,
+  "/whoami":       cmdWhoami,
+};
+
+function run(raw, { echo = true } = {}) {
+  const cmd = raw.trim();
+  if (!cmd) return;
+  if (echo) printCmd(cmd);
+  const key = cmd.toLowerCase().split(/\s+/)[0];
+  const fn = COMMANDS[key] || COMMANDS["/" + key.replace(/^\/+/, "")];
+  if (fn) {
+    fn();
+  } else {
+    printErr(`command not found: ${cmd} — try /help`);
+  }
+  scrollToBottom();
+}
+
+function scrollToBottom() {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  input.focus();
+}
+
+/* ---------- history + autocomplete ---------- */
+const history = [];
+let histIdx = -1;
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const v = input.value;
+    if (v.trim()) {
+      history.push(v);
+      histIdx = history.length;
+      run(v);
+    }
+    input.value = "";
+    e.preventDefault();
+  } else if (e.key === "ArrowUp") {
+    if (history.length === 0) return;
+    histIdx = Math.max(0, histIdx - 1);
+    input.value = history[histIdx] || "";
+    // move caret to end
+    requestAnimationFrame(() => { input.setSelectionRange(input.value.length, input.value.length); updateMirror(); });
+    e.preventDefault();
+  } else if (e.key === "ArrowDown") {
+    if (history.length === 0) return;
+    histIdx = Math.min(history.length, histIdx + 1);
+    input.value = history[histIdx] || "";
+    requestAnimationFrame(() => { input.setSelectionRange(input.value.length, input.value.length); updateMirror(); });
+    e.preventDefault();
+  } else if (e.key === "Tab") {
+    e.preventDefault();
+    const v = input.value.trim().toLowerCase();
+    if (!v) return;
+    const keys = Object.keys(COMMANDS);
+    const matches = keys.filter((k) => k.startsWith(v));
+    if (matches.length === 1) {
+      input.value = matches[0];
+      input.setSelectionRange(input.value.length, input.value.length);
+    } else if (matches.length > 1) {
+      printCmd(v);
+      printBlock(`<p class="muted">${matches.join("  ")}</p>`);
+      scrollToBottom();
+    }
+  } else if (e.key === "l" && (e.ctrlKey || e.metaKey)) {
+    e.preventDefault();
+    cmdClear();
+  }
+  // selection/caret position updates after the key is processed
+  requestAnimationFrame(updateMirror);
+});
+
+input.addEventListener("input", updateMirror);
+input.addEventListener("keyup", updateMirror);
+input.addEventListener("focus", updateMirror);
+input.addEventListener("blur", updateMirror);
+document.addEventListener("selectionchange", updateMirror);
+
+/* keep focus on the input when clicking anywhere on the screen */
+screenEl.addEventListener("click", (e) => {
+  if (window.getSelection().toString()) return;
+  input.focus();
+});
+
+/* ---------- boot: show about + experience immediately ---------- */
+(function boot() {
+  run("/about",      { echo: true });
+  run("/experience", { echo: true });
+  input.focus();
+  updateMirror();
+})();
+</script>
+</body>
+</html>
