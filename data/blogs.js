@@ -4,6 +4,11 @@
    ============================================================ */
 window.BLOGS = [
   {
+    date: "2026-04-26",
+    title: "A Walk Through the JAX Compiler Stack and Shardy",
+    href: "./blogs/viewer.html?post=jax_shardy",
+  },
+  {
     date: "2024-11-08",
     title: "Hackergame 2024 Write-Up",
     href: "https://github.com/USTC-Hackergame/hackergame2024-writeups/blob/master/players/%E5%A4%8F%E5%92%8C%E5%B0%8F/README.md",
