@@ -9,8 +9,8 @@ window.EXPERIENCE = [
   {
     when: "2026.5 — 9",
     what: "Research Scientist Intern",
-    where: "Meta Superintelligence Labs - Infra",
-    note: "PyTorch Distributed Team",
+    where: "PyTorch Distributed",
+    note: "Meta Superintelligence Labs - Infra",
   },
 
 ];
