@@ -24,7 +24,7 @@ window.PUBLICATIONS = [
   {
     title: "RecDM: Efficient Training System for Large-Scale Recommendation Models on Disaggregated Memory",
     authors: "Zheng Wang, Zhongkai Yu, Kaijian Wang, et al.",
-    venue: "In submission",
+    venue: "ACM Transactions on Architecture and Code Optimization (TACO), 2026",
     links: [],
   },
 

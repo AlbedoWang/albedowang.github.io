@@ -194,6 +194,7 @@
 <script src="./data/about.js"></script>
 <script src="./data/experience.js"></script>
 <script src="./data/publications.js"></script>
+<script src="./data/talks.js"></script>
 <script src="./data/projects.js"></script>
 <script src="./data/blogs.js"></script>
 <script src="./data/contact.js"></script>
@@ -204,6 +205,7 @@ const DATA = {
   about:        window.ABOUT,
   experience:   window.EXPERIENCE,
   publications: window.PUBLICATIONS,
+  talks:        window.TALKS,
   projects:     window.PROJECTS,
   blogs:        window.BLOGS,
   contact:      window.CONTACT,
@@ -302,6 +304,20 @@ function cmdPublications() {
   printBlock(`<h2>publications</h2>${items}<p class="dim">* denotes equal contribution.</p>`);
 }
 
+function cmdTalks() {
+  // title / venue allow HTML
+  const rows = DATA.talks.map((t) => `
+    <li class="row">
+      <div class="when">${esc(t.when)}</div>
+      <div class="what">
+        <strong>${t.title}</strong>
+        ${t.venue ? `<div class="muted">${t.venue}</div>` : ""}
+      </div>
+    </li>
+  `).join("");
+  printBlock(`<h2>talks</h2><ul>${rows}</ul>`);
+}
+
 function cmdProjects() {
   // desc allows HTML
   const items = DATA.projects.map((p) => `
@@ -344,6 +360,7 @@ function cmdHelp() {
     ["/about",        "who I am"],
     ["/experience",   "education & research positions"],
     ["/publications", "papers & preprints"],
+    ["/talks",        "invited talks & presentations"],
     ["/projects",     "open-source projects"],
     ["/blogs",        "writing & notes"],
     ["/contact",      "email & social links"],
@@ -372,6 +389,7 @@ const COMMANDS = {
   "/about":        cmdAbout,
   "/experience":   cmdExperience,
   "/publications": cmdPublications,
+  "/talks":        cmdTalks,
   "/projects":     cmdProjects,
   "/blogs":        cmdBlogs,
   "/blog":         cmdBlogs,
@@ -463,10 +481,11 @@ screenEl.addEventListener("click", (e) => {
   input.focus();
 });
 
-/* ---------- boot: show about + experience immediately ---------- */
+/* ---------- boot: show about + experience + help immediately ---------- */
 (function boot() {
   run("/about",      { echo: true });
   run("/experience", { echo: true });
+  run("/help",       { echo: true });
   input.focus();
   updateMirror();
 })();
