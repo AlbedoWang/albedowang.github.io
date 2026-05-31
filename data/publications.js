@@ -4,6 +4,13 @@
    ============================================================ */
 window.PUBLICATIONS = [
   {
+    title: "RecDM: Efficient Training System for Large-Scale Recommendation Models on Disaggregated Memory",
+    authors: "Zheng Wang, Zhongkai Yu, Kaijian Wang, et al.",
+    venue: "ACM Transactions on Architecture and Code Optimization (TACO), 2026",
+    links: [],
+  },
+
+  {
     title: "ALTO: Adaptive LoRA Tuning and Orchestration for Heterogeneous LoRA Training Workloads",
     authors: "Jingwei Zuo, Xinze Feng, Zien Liu, et al.",
     venue: "arXiv preprint, 2026",
@@ -19,13 +26,6 @@ window.PUBLICATIONS = [
     links: [
       { label: "paper", href: "https://arxiv.org/abs/2508.17756" },
     ],
-  },
-
-  {
-    title: "RecDM: Efficient Training System for Large-Scale Recommendation Models on Disaggregated Memory",
-    authors: "Zheng Wang, Zhongkai Yu, Kaijian Wang, et al.",
-    venue: "ACM Transactions on Architecture and Code Optimization (TACO), 2026",
-    links: [],
   },
 
 ];
