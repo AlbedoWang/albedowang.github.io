@@ -28,4 +28,13 @@ window.PUBLICATIONS = [
     ],
   },
 
+  {
+    title: "Characterization-Guided GPU Fault Resilience in NVIDIA MPS",
+    authors: "Rixin Liu, Xingqi Cui, Kaijian Wang, et al.",
+    venue: "arXiv preprint, 2026",
+    links: [
+      { label: "paper", href: "https://arxiv.org/abs/2605.26461" },
+    ],
+  },
+
 ];
